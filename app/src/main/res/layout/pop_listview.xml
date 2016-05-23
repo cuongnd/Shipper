@@ -1,0 +1,20 @@
+<?xml version="1.0"  encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_marginLeft="36dp"
+    android:layout_marginRight="36dp"
+    android:layout_marginBottom="10dp" >
+    <ListView
+        android:id="@+id/lvResults"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/bg_silver"
+        android:dividerHeight="0dp"
+        android:cacheColorHint="@color/white"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:headerDividersEnabled="true" />
+</LinearLayout>

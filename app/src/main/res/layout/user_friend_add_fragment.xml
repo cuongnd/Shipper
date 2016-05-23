@@ -1,0 +1,63 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:visibility="gone"
+        app:canClose="true"
+        app:menuImage="@drawable/w_cysj_icon_bj" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <LinearLayout
+        style="@style/RegionBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/optAmount"
+            style="@style/RegionRowBox">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="司机手机号" />
+
+            <LinearLayout style="@style/RegionRowBodyBox">
+
+                <EditText
+                    android:id="@+id/txtPhone"
+                    style="@style/NormalFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:hint="@string/tip_add_friend"
+                    android:inputType="phone"
+                    android:textColorHint="@color/hint_face_color" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        style="@style/BlueSharpFillButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="查找并添加" />
+
+
+</LinearLayout>

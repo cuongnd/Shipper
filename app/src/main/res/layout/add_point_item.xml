@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/normal_divider_height"
+        android:paddingRight="@dimen/normal_divider_height"
+        android:layout_height="84dp">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/Lin_AddPoints"
+            android:visibility="visible"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@mipmap/fh_icon_point"
+                android:layout_marginBottom="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:src="@mipmap/fh_icon_point"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/img_deliver_icon"
+            android:src="@mipmap/fh_icon_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/Lin_PayAddIcons"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <!--<ImageView-->
+            <!--android:src="@mipmap/fh_icon_point"-->
+            <!--android:layout_marginTop="@dimen/normal_divider_height"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content" />-->
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+        android:background="@color/bg_silver"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/LinAutoToAddress"
+            android:layout_marginTop="1dp"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/white"
+            >
+            <TextView
+                android:id="@+id/txtPayeeCollectionAddress"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_text_size"
+                android:layout_weight="1"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/icon_very_small_h"
+                android:hint="@string/hint_click_set_to_address"
+                android:gravity="center_vertical"
+                android:lines="2"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dd_icon_yl" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/dd_icon_yl" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/LinAutoToInfo"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:layout_marginTop="1dp"
+            >
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txtCollectName"
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:hint="@string/deliver_collection_consignee" />
+                <!--<TextView-->
+                    <!--android:id="@+id/txtCollectPhone"-->
+                    <!--style="@style/LabelFont"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="@dimen/dp_4" />-->
+                <LinearLayout
+                    android:id="@+id/LinCollectionMoney"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4"
+                        android:text="@string/deliver_collection" />
+                    <TextView
+                        android:id="@+id/txtCollectMoney"
+                        style="@style/RedFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_4" />
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/dd_icon_yl" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:src="@drawable/dd_icon_yl" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

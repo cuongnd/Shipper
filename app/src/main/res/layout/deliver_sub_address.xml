@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        style="@style/RegionLabelIconBox"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wyfh_icon_xxdz" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/RegionRowBox"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_sent_address" />
+
+            <LinearLayout
+                android:id="@+id/optFrom"
+                style="@style/RegionRowBodyBox" >
+
+                <TextView
+                    android:id="@+id/labFrom"
+                    style="@style/NormalFont"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="@string/hint_click_set_from_address"
+                    android:lines="2"
+                    android:textColorHint="@color/hint_face_color" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/trans"
+                android:src="@drawable/wyfh_icon_wz" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_grey"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            style="@style/RegionRowBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_receive_address" />
+
+            <LinearLayout
+                android:id="@+id/optTo"
+                style="@style/RegionRowBodyBox">
+
+                <TextView
+                    android:id="@+id/labTo"
+                    style="@style/NormalFont"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:background="@null"
+                    android:hint="@string/hint_click_set_to_address"
+                    android:lines="2"
+                    android:textColorHint="@color/hint_face_color" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btnTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/trans"
+                android:src="@drawable/wyfh_icon_wz" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver">
+
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true" />
+
+    <RelativeLayout
+        android:id="@+id/order_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/pic_head"
+        android:visibility="gone"
+        android:background="@color/bg_darkblue" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="@string/certification"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/title_text_size" />
+
+        <RelativeLayout android:id="@+id/btn_Back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            >
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/bg_gray"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/tool_bar_icon_back_2x"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/more_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/bg_gray"
+            android:src="@drawable/w_cysj_icon_bj"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+<!--审核中-->
+    <LinearLayout
+        android:id="@+id/audit_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/order_title"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:id="@+id/state_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_certification_ing"
+            />
+        <TextView
+            android:id="@+id/state_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/in_the_review"
+            android:textColor="@color/label_text_gray"
+            android:textSize="@dimen/title_huge_text_size"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/txt_ac_certification_verify_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review_of_patient"
+            android:textColor="@color/label_text_gray"
+            android:textSize="@dimen/title_text_size"
+            android:layout_marginTop="6dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/certification_progress"
+            android:textColor="@color/label_text_gray"
+            android:layout_marginTop="@dimen/dp_20"
+            />
+    </LinearLayout>
+
+
+
+<!--已通过-->
+    <LinearLayout
+        android:id="@+id/has_passed_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="48dp"
+        android:layout_below="@+id/order_title"
+        android:visibility="visible"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/complete_certification"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/in_the_review"
+            android:textColor="@color/label_text_gray"
+            android:textSize="@dimen/title_huge_text_size"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/has_passed"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/title_text_size"
+            />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                >
+                <ImageView
+                    android:id="@+id/name_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dw_icon_czblue"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wo_name"
+                    android:textColor="@color/label_text_gray"
+                    android:textSize="@dimen/normal_text_size"
+                    android:paddingLeft="10dp"
+                    android:layout_toRightOf="@+id/name_img"
+                    android:layout_centerVertical="true"
+                    />
+                <TextView
+                    android:id="@+id/name_fill_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/label_text_gray"
+                    android:textSize="@dimen/normal_text_size"
+                    android:layout_toRightOf="@+id/name"
+                    android:layout_centerVertical="true"
+                    android:visibility="invisible"
+                    />
+                <TextView
+                    android:id="@+id/name_ed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/name_fill_txt"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/most_black"
+                    android:textSize="@dimen/normal_text_size"
+                    android:singleLine="true"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout android:layout_marginTop="@dimen/dp_20"
+            android:layout_width="fill_parent" android:background="@color/white"
+            android:layout_height="180dp">
+            <TextView
+                android:text="@string/auth_success"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/txtAuthVerfyTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/certification_progress"
+            android:textColor="@color/label_text_gray"
+            android:layout_marginTop="@dimen/dp_20"
+            />
+    </LinearLayout>
+
+
+<!--未通过-->
+    <LinearLayout
+        android:id="@+id/not_by_lin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_marginTop="44dp"
+        android:layout_below="@+id/order_title"
+        android:visibility="gone"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/not_through"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/in_the_review"
+            android:textColor="@color/label_text_gray"
+            android:textSize="@dimen/title_huge_text_size"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/prompt_failed"
+            android:textColor="@color/most_black"
+            android:textSize="@dimen/title_text_size"
+            android:layout_marginTop="6dp"
+            />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_by_reason"
+                android:textColor="@color/label_text_gray"
+                android:textSize="@dimen/title_text_size"
+                android:layout_marginLeft="30dp"
+                />
+            <TextView
+                android:id="@+id/txt_auth_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/image_fuzzy"
+                android:textColor="@color/most_black"
+                android:textSize="@dimen/title_text_size"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/Lin_Error"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/not_by_reason"
+                android:textColor="@color/label_text_gray"
+                android:textSize="@dimen/title_text_size"
+                android:layout_marginLeft="30dp"
+                android:visibility="invisible"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wrong_information"
+                android:textColor="@color/most_black"
+                android:textSize="@dimen/title_text_size"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="88dp"
+            android:layout_marginLeft="10dp"
+            >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/certification_progress"
+            android:textColor="@color/label_text_gray"
+            android:textSize="@dimen/title_text_size"
+
+            />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/resubmit_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/bg_blue"
+            android:text="@string/to_resubmit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_huge_text_size"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <!-- 保险-->
+    <LinearLayout
+        style="@style/RegionBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/RegionLabelIconBox"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fh_icon_safe_blue" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/RegionRowBox">
+
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_insurance" />
+
+            <LinearLayout
+                android:id="@+id/optInsurance"
+                style="@style/RegionRowBodyBox">
+
+                <TextView
+                    android:id="@+id/labInsurance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:textColor="@color/orange_red"
+                    android:hint="@string/hint_select_insurance"
+                    android:text=""
+                    android:textColorHint="@color/hint_face_color" />
+
+                <TextView
+                    style="@style/NormalFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wyfh_icon_zk" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <!--隐藏选填-->
+    <LinearLayout
+        android:id="@+id/LinOptional"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <!--配送方式-->
+        <LinearLayout
+
+            style="@style/RegionBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/RegionLabelIconBox"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:src="@drawable/wyfh_icon_phfs" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_trans_type" />
+
+
+                <RadioGroup
+                    android:id="@+id/radTransStyle"
+                    style="@style/RegionRowBodyBox"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/radLD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:textColor="@color/radio_tag"
+                        android:background="@drawable/radio_bg"
+                        android:text="@string/lab_carload" />
+                    <TextView
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content" />
+                    <RadioButton
+                        android:id="@+id/radZC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:textColor="@color/radio_tag"
+                        android:background="@drawable/radio_bg"
+                        android:text="@string/lab_vehicle" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <!-- 货物类型-->
+        <LinearLayout
+            style="@style/RegionBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/RegionLabelIconBox"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wyfh_icon_jg" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/RegionRowBox">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_price" />
+
+                <LinearLayout
+                    android:id="@+id/optPrice"
+                    style="@style/RegionRowBodyBox">
+
+                    <TextView
+                        android:id="@+id/labPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_input_tmp_price"
+                        android:text=""
+                        android:textColorHint="@color/hint_face_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wyfh_icon_zk" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- 货物数量-->
+        <LinearLayout
+            style="@style/RegionBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/RegionLabelIconBox"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/wyfh_icon_fp" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/RegionRowBox">
+
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_invoice" />
+
+                <LinearLayout
+                    android:id="@+id/optInvoice"
+                    style="@style/RegionRowBodyBox">
+
+                    <TextView
+                        android:id="@+id/labInvoice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/hint_select_invoice"
+                        android:text=""
+                        android:textColorHint="@color/hint_face_color" />
+
+                    <TextView
+                        android:id="@+id/labGoodsUnit"
+                        style="@style/NormalFont"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wyfh_icon_zk" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/Lin_Consignee"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <include
+                style="@style/RegionBox"
+                layout="@layout/deliver_sub_consignee" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinShowMore"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:padding="@dimen/normal_divider_height"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/fh_icon_open"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="展开"
+            style="@style/LabelFont"
+            android:layout_marginLeft="@dimen/normal_divider_height"
+            android:textColor="@color/bg_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</LinearLayout>

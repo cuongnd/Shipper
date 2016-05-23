@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/transparent"
+                android:orientation="vertical"
+    >
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/view"
+        android:background="@color/bg_silver">
+
+        <RelativeLayout
+            android:id="@+id/top_bar_title"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/white"
+            >
+
+            <TextView
+                android:id="@+id/btn_close"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/btn_cancel"
+                android:textColor="@color/most_black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/choose_pay_coupon"
+                android:textColor="@color/most_black"
+                android:textSize="@dimen/sp_16"/>
+
+            <TextView
+                android:id="@+id/btn_finish"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="确定"
+                android:textColor="@color/most_black"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+        <!--无优惠券-->
+        <RelativeLayout
+            android:id="@+id/ReNotCoupon"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/top_bar_title"
+            android:layout_marginTop="0.5dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sorry_not_coupon"
+                />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/couponList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/top_bar_title"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@color/transparent"
+            android:listSelector="@color/transparent"
+            android:dividerHeight="6dp"
+            android:fadingEdge="none"
+            android:padding="6dp"
+            android:scrollbars="none"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+    <!---->
+
+
+</RelativeLayout>

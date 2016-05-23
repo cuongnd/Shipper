@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?><!--oder 里的相关样式-->
+<resources>
+
+    <!--
+    注：
+    small : 10 sp
+    normal : 14 sp
+    title  : 16 sp
+    big :   20sp
+
+    -->
+
+
+
+    <!-- ************************ 文本类样式 ************************-->
+    <!-- 普通标签文本-->
+    <style name="BlueText">
+        <item name="android:textColor">@color/face_blue</item>
+    </style>
+
+    <style name="NormalText">
+        <item name="android:textColor">@color/face_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="BigText">
+        <item name="android:textColor">@color/face_black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="LabelNormalText">
+        <item name="android:textColor">@color/face_grey</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LabelWhiteText">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="LabelSmallText">
+        <item name="android:textColor">@color/face_grey</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+
+
+
+
+
+    <!-- 内容文本-->
+    <style name="OrderNormalTextStyle">
+        <item name="android:textColor">@color/face_black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <!-- 左边标签，右边的内容的样式-->
+    <style name="OrderRightTextStyle" parent="OrderNormalTextStyle">
+        <item name="android:layout_marginLeft">12dp</item>
+    </style>
+
+    <style name="OrderAreaTextStyle">
+        <item name="android:textColor">@color/face_black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="OrderTitleTextStyle">
+        <item name="android:textColor">@color/face_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="OrderQuotePriceTextStyle">
+        <item name="android:textColor">@color/face_blue</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+    <style name="OrderQuoteTextStyle">
+        <item name="android:textColor">@color/orange_red</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+
+    <!-- 垂直灰细线-->
+    <style name="DividerGreyVertical">
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_width">0.5dp</item>
+        <item name="android:background">@color/bg_grey</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+
+
+
+    <!-- 无处着力的Style-->
+
+    <!-- 透明弹窗口-->
+    <style name="DialogBoxWithTrans">
+        <item name="android:layout_marginTop">58dp</item>
+        <item name="android:layout_marginBottom">58dp</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+
+    <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--模糊-->
+    </style>
+
+
+
+    <style name="selectorDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <!--边框-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsTranslucent">false</item>
+        <!--半透明-->
+        <item name="android:windowNoTitle">true</item>
+        <!--无标题-->
+        <item name="android:windowBackground">@color/trans</item>
+        <!--背景透明-->
+        <item name="android:backgroundDimEnabled">false</item>
+        <!--模糊-->
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
+
+    <style name="Translucent_NoTitle" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+
+</resources>

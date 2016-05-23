@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <string name="tip_need_net">无法连接，请检查网络状态！</string>
+
+
+    <string name="drop_down_list_header_default_text">点击可以刷新</string>
+    <string name="drop_down_list_header_pull_text">下拉可以刷新</string>
+    <string name="drop_down_list_header_release_text">松开可以刷新</string>
+    <string name="drop_down_list_header_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_default_text">更多</string>
+    <string name="drop_down_list_footer_loading_text">加载中&#8230;</string>
+    <string name="drop_down_list_footer_no_more_text">没有更多了</string>
+
+
+    <string name="ptr_pull_to_refresh">下拉刷新</string>
+    <string name="ptr_release_to_refresh">松开刷新</string>
+    <string name="ptr_refreshing">加载中&#8230;</string>
+    <string name="ptr_last_updated">更新于: %1$s</string>
+
+    <string name="pull_to_refresh_pull_label">拽动刷新…</string>
+    <string name="pull_to_refresh_release_label">放开以刷新…</string>
+    <string name="pull_to_refresh_refreshing_label">正在载入…</string>
+
+    <string name="result_error">接口返回内容出错</string>
+    <string name="result_failed_net">网络不给力，请稍候重试</string>
+    <string name="result_failed_service">服务器繁忙，请稍后再试</string>
+    <string name="result_failed">获取服务端数据出错</string>
+
+    <!-- 提示信息-->
+    <string name="dialog_loading">正在连接中,请稍候…</string>
+    <string name="dialog_request">正在请求…</string>
+
+    <string name="crop__saving">保存中…</string>
+    <string name="add_bank">添加银行卡</string>
+    <string name="crop__wait">请稍等…</string>
+    <string name="crop__pick_error">源图像错误</string>
+    <string name="scan_text">请方框对准二维码进行扫描</string>
+    <string name="crop__done">完成</string>
+    <string name="crop__cancel" tools:ignore="ButtonCase">取消</string>
+    <string name="login_overed">您的账号已在其他设备上登录。若非本人操作，您的登录密码可能已泄露，请及时改密。</string>
+
+</resources>

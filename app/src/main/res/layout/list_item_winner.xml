@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="70dp" android:padding="5dp">
+    <ImageView
+        android:id="@+id/imgGameHead"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/w_icon_tjzp"/>
+    <LinearLayout
+        android:layout_toRightOf="@id/imgGameHead"
+        android:layout_toLeftOf="@+id/txtWinMoney"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/normal_divider_height"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/txtGameName"
+                android:text="张琦"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/BigFont"/>
+            <TextView
+                android:id="@+id/txtGameTime"
+                android:text="11-15 15:20"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/SmallFont"/>
+        </LinearLayout>
+        <TextView
+            android:text="运气就是这么好，不要怪我"
+            android:layout_marginTop="@dimen/dp_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/NormalFont"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtWinMoney"
+        android:padding="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="5 元"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/BigFont"/>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    style="@style/BoxNormalStyle"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/labAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="labAddress"
+        style="@style/NormalFont"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        style="@style/LabelFont"
+        android:id="@+id/labSetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="labSetting"
+        android:layout_alignTop="@+id/labAddress"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp" />
+
+</RelativeLayout>

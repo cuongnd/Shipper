@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tabOrder"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--必须 ID不能改
+        style="@android:style/Widget.Holo.Light.TabWidget"-->
+        <TabWidget
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@android:id/tabs"
+            android:background="@color/white" />
+
+        <!--必须 ID不能改-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/bg_grey"
+            android:id="@android:id/tabcontent"
+            >
+
+            <LinearLayout android:name="org.csware.ee.shipper.fragment.OrderQuotingFragment"
+                android:id="@+id/orderQuoting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+            <LinearLayout android:name="org.csware.ee.shipper.fragment.OrderShippingFragment"
+                android:id="@+id/orderShipping"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+            <LinearLayout android:name="org.csware.ee.shipper.fragment.OrderFinishedFragment"
+                android:id="@+id/orderFinished"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" />
+
+            <!--<fragment android:name="org.csware.ee.shipper.fragment.OrderQuotingFragment"-->
+                <!--android:tag="tab1"-->
+                <!--android:id="@+id/orderQuoting"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--tools:layout="@layout/fragment_order_quoting" />-->
+
+            <!--<fragment android:name="org.csware.ee.shipper.fragment.OrderShippingFragment"-->
+                <!--android:tag="tab2"-->
+                <!--android:id="@+id/orderShipping"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--tools:layout="@layout/order_shipping_fragment" />-->
+
+            <!--<fragment android:name="org.csware.ee.shipper.fragment.OrderFinishedFragment"-->
+                <!--android:tag="tab3"-->
+                <!--android:id="@+id/orderFinished"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--tools:layout="@layout/order_finished_fragment" />-->
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/orderBody"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" />
+
+    </LinearLayout>
+
+</TabHost>

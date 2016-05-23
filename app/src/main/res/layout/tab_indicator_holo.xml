@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="36dp"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:gravity="center"
+    android:layout_gravity="top">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hello_world"
+        android:gravity="center"
+        android:padding="8dp"
+        android:background="@drawable/tab_indicator"
+        />
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<org.csware.ee.widget.ScrollLinerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RegionBox"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+        <LinearLayout style="@style/PicBox">
+
+            <ImageView
+                android:id="@+id/ivIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bank_iocn_gsyh" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labName"
+                    style="@style/TitleFont"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="中国银行" />
+                <TextView
+                    style="@style/TitleFont"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_marginLeft="@dimen/icon_very_small_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/savings" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/labCarNo"
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2222" />
+        </LinearLayout>
+
+
+        <LinearLayout style="@style/EndPicBox"
+            android:gravity="right">
+
+            <TextView
+                android:id="@+id/txtMailBtn"
+                android:gravity="right"
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:text="详情"
+                style="@style/MailOnFont"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/delete_action"
+        android:layout_width="@dimen/delete_action_len"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@drawable/btndel_selector"
+        android:drawableLeft="@drawable/pop_up_del"
+        android:gravity="center"
+        android:padding="7dip"
+        android:textSize="18dip"
+        android:text="@string/delete_txt"
+        android:textColor="#FFF" />
+
+
+
+</org.csware.ee.widget.ScrollLinerLayout>

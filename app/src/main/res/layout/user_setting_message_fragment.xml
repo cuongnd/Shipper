@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" />
+
+
+    <me.xiaopan.switchbutton.SwitchButton
+        android:id="@+id/chkMessage"
+        style="@style/SwitchItemBox"
+        android:text="消息通知"
+        app:frameDrawable="@drawable/switch_frame"
+        app:sliderDrawable="@drawable/selector_switch_slider"
+        app:stateDrawable="@drawable/selector_switch_state"
+        app:stateMaskDrawable="@drawable/switch_state_mask"
+        app:withTextInterval="16dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" />
+
+
+    <me.xiaopan.switchbutton.SwitchButton
+        android:id="@+id/chkSound"
+        style="@style/SwitchItemBox"
+        android:text="声音"
+        app:frameDrawable="@drawable/switch_frame"
+        app:sliderDrawable="@drawable/selector_switch_slider"
+        app:stateDrawable="@drawable/selector_switch_state"
+        app:stateMaskDrawable="@drawable/switch_state_mask"
+        app:withTextInterval="16dp" />
+
+    <me.xiaopan.switchbutton.SwitchButton
+        android:id="@+id/chkShake"
+        style="@style/SwitchItemBox"
+        android:text="震动"
+        app:frameDrawable="@drawable/switch_frame"
+        app:sliderDrawable="@drawable/selector_switch_slider"
+        app:stateDrawable="@drawable/selector_switch_state"
+        app:stateMaskDrawable="@drawable/switch_state_mask"
+        app:withTextInterval="16dp" />
+
+
+</LinearLayout>

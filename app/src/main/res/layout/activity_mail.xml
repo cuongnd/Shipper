@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/bg_silver"
+    android:layout_height="match_parent">
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true"
+        />
+    <LinearLayout
+        style="@style/WhiteButton"
+        android:id="@+id/LinSearch"
+        android:layout_margin="@dimen/icon_very_small_h"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp">
+        <ImageView
+            android:src="@drawable/dw_icon_xz"
+            android:layout_margin="@dimen/dp_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:background="@null"
+            style="@style/NormalFont"
+            android:hint="搜索"
+            android:textSize="@dimen/small_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/btnFriend"
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_height="wrap_content"
+        android:background="@drawable/click_of_result"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/NormalFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:text="@string/lab_contact_tip" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            style="@style/RegionIconBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dd_icon_yl" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinAddFreind"
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_height="wrap_content"
+        android:background="@drawable/click_of_result"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/NormalFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_4"
+            android:text="@string/lab_add_contact_tip" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <LinearLayout
+            style="@style/RegionIconBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/dd_icon_yl" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:layout_height="fill_parent">
+
+        <ExpandableListView android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="fill_parent" android:id="@+id/elist"
+            android:dividerHeight="0.5dp"
+            android:scrollbars="none"
+            android:childDivider="@color/bg_silver"
+            android:groupIndicator="@null" />
+
+        <org.csware.ee.widget.AssortView
+            android:layout_width="30dip" android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:id="@+id/assort" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="bankcard_names">
+        <item>中国工商银行</item>
+        <item>中国建设银行</item>
+        <item>中国农业银行</item>
+        <item>中国银行</item>
+        <item>招商银行</item>
+        <item>交通银行</item>
+        <item>中国光大银行</item>
+        <item>中国民生银行</item>
+    </string-array>
+    <string-array name="bankcard_icons">
+        <item>bank_iocn_gsyh</item>
+        <item>bank_iocn_jsyh</item>
+        <item>bank_iocn_nyyh</item>
+        <item>bank_iocn_zgyh</item>
+        <item>bank_iocn_zsyh</item>
+        <item>bank_iocn_jtyh</item>
+        <item>bank_iocn_gdyh</item>
+        <item>bank_iocn_msyh</item>
+    </string-array>
+
+    <!-- 注意，不要超过4个字-->
+    <string-array name="goods_style">
+        <item>机械设备</item>
+        <item>食品</item>
+        <item>钢材</item>
+        <item>矿产</item>
+        <item>建材</item>
+        <item>药品</item>
+        <item>化工</item>
+        <item>木材</item>
+        <item>日用品</item>
+        <item>电子产品</item>
+        <item>农副产品</item>
+        <item>家具家居</item>
+        <item>其它</item>
+    </string-array>
+
+    <string-array name="truck_style">
+        <item>厢式车</item>
+        <item>平板车</item>
+        <item>高栏车</item>
+        <item>中栏车</item>
+        <item>低栏车</item>
+        <item>高低板车</item>
+        <item>集装箱车</item>
+        <item>罐式车</item>
+        <item>自卸车</item>
+        <item>冷藏车</item>
+        <item>保温车</item>
+        <item>危险品车</item>
+        <item>其它</item>
+    </string-array>
+
+    <!--<string-array name="truck_length">-->
+        <!--<item>不限</item>-->
+        <!--<item>6米</item>-->
+        <!--<item>13米</item>-->
+        <!--<item>18米</item>-->
+    <!--</string-array>-->
+
+    <string-array name="invoice_style">
+        <item>无需发票</item>
+        <item>普通发票</item>
+        <item>增值税发票(6%)</item>
+        <item>增值税发票(11%)</item>
+        <item>增值税发票(17%)</item>
+    </string-array>
+
+
+    <string-array name="pay_point_style">
+        <item>见货付款</item>
+        <item>货到付款</item>
+        <item>见票付款</item>
+        <item>见回单付款</item>
+    </string-array>
+
+
+    <!-- 以下暂不用-->
+
+    <string-array name="calculate_unit_style">
+        <item>吨位</item>
+        <item>方数</item>
+        <item>车数</item>
+    </string-array>
+
+    <!--单价-->
+    <string-array name="price_unit_style">
+        <item>元/吨</item>
+        <item>元/方</item>
+        <item>元/车</item>
+    </string-array>
+
+
+</resources>

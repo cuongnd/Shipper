@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_silver"
+              android:orientation="vertical">
+
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true"
+        />
+
+    <LinearLayout
+        android:id="@+id/Lin_calculation"
+        style="@style/RegionPaddingBox"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/orange_red"
+        android:orientation="vertical"
+        android:paddingBottom="16dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/WhiteFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="等待支付："/>
+
+            <TextView
+                android:id="@+id/txtPayMoney"
+                style="@style/FreightFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0.0"/>
+
+            <TextView
+                style="@style/WhiteFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="元"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:visibility="invisible">
+
+                <TextView
+                    style="@style/WhiteFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="参考总价："/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/LinAward"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:baselineAligned="true"
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/WhiteFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="奖励："/>
+
+                <TextView
+                    android:id="@+id/labRewardPrice"
+                    style="@style/FreightFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="--.--"
+                    android:textSize="@dimen/btn_huge_text_size"/>
+
+                <TextView
+                    style="@style/WhiteFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="元"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/WhiteFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:text=""/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_30"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/dp_30">
+        <!--<include layout="@layout/list_item_bankcard" />-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/RegionPaddingBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:text="姓名"
+                android:textColor="@color/black"/>
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:text="给你"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/txtRecName"
+                style="@style/NormalFont"
+                android:layout_width="0.0dp"
+                android:layout_weight="5.5"
+                android:background="@null"
+                android:maxLength="32"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/RegionPaddingBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:text="油卡号"
+                android:textColor="@color/black"/>
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:text="给"
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/txtAddress"
+                style="@style/NormalFont"
+                android:layout_width="0.0dp"
+                android:layout_weight="5.5"
+                android:background="@null"
+                android:text=""
+                />
+
+            <TextView
+                android:id="@+id/txtGoodsType"
+                style="@style/NormalFont"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="@dimen/normal_divider_height"
+                android:background="@null"
+                android:text=""
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/RegionPaddingBox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:text="创建时间"
+                android:textColor="@color/black"/>
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:text=""
+                android:textColor="@color/black"
+                android:visibility="invisible"/>
+
+            <TextView
+                android:id="@+id/txtCreateTime"
+                style="@style/NormalFont"
+                android:layout_width="0.0dp"
+                android:layout_weight="5.5"
+                android:background="@null"
+                android:maxLength="32"
+                android:text=""
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnCoupons"
+            style="@style/RegionPaddingBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:text="优惠券"
+                android:textColor="@color/black"
+                android:textSize="@dimen/title_text_size"/>
+
+
+            <LinearLayout style="@style/EndIconBox">
+
+                <TextView
+                    android:id="@+id/labCoupons"
+                    style="@style/RedFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/normal_text_size"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/dd_icon_yl"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        style="@style/RedSharpFillButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="确认付款"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:layout_marginTop="@dimen/icon_very_small_h"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtPayMethod"
+            style="@style/LabelNormalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:text=""
+            android:textSize="@dimen/normal_text_size"/>
+
+        <TextView
+            android:id="@+id/txtPayChange"
+            style="@style/BlueText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/icon_very_small_h"
+            android:text="@string/payChange"
+            android:textSize="@dimen/normal_text_size"/>
+    </LinearLayout>
+</LinearLayout>

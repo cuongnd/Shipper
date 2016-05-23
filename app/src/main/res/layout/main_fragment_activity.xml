@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cs="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tabContent"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </android.support.v4.view.ViewPager>
+
+    <!--<com.jfeinstein.jazzyviewpager.JazzyViewPager-->
+        <!--android:id="@+id/jazzy_pager"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_height="0dp">-->
+    <!--</com.jfeinstein.jazzyviewpager.JazzyViewPager>-->
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:background="@drawable/bg_tab_bottom"
+        android:orientation="horizontal" >
+
+        <org.csware.ee.view.TabBottomView
+            android:id="@+id/tabHome"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            cs:tab_icon="@drawable/tab_icon_ky"
+            cs:tab_icon_scale_size="@dimen/tab_icon_scale_size"
+            cs:tab_color="@color/bg_blue"
+            cs:tab_text="@string/tab_home"
+            cs:tab_text_size="12sp" />
+
+        <org.csware.ee.view.TabBottomView
+            android:id="@+id/tabOrder"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            cs:tab_color="@color/bg_blue"
+            cs:tab_icon="@drawable/tab_icon_dd"
+            cs:tab_icon_scale_size="@dimen/tab_icon_scale_size"
+            cs:tab_text="@string/tab_order"
+            cs:tab_text_size="12sp" />
+
+        <org.csware.ee.view.TabBottomView
+            android:id="@+id/tabTrack"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            cs:tab_color="@color/bg_blue"
+            cs:tab_icon="@drawable/tab_icon_gz"
+            cs:tab_icon_scale_size="@dimen/tab_icon_scale_size"
+            cs:tab_text="@string/tab_track"
+            cs:tab_text_size="12sp" />
+
+        <org.csware.ee.view.TabBottomView
+            android:id="@+id/tabMine"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:padding="5dp"
+            cs:tab_color="@color/bg_blue"
+            cs:tab_icon="@drawable/tab_icon_w"
+            cs:tab_icon_scale_size="@dimen/tab_icon_scale_size"
+            cs:tab_text="@string/tab_mine"
+            cs:tab_text_size="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

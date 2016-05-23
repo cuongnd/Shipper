@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    style="@style/BoxNormalStyle"
+    android:gravity="center_vertical">
+
+    <org.csware.ee.view.CircleImageView
+        android:layout_width="@dimen/pic_small_head"
+        android:layout_height="@dimen/pic_small_head"
+        android:id="@+id/ivHeadPic"
+        android:layout_above="@+id/linearLayout"
+        android:layout_margin="2dp"
+        android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/labName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="labName"
+        style="@style/NormalText"
+        android:layout_alignTop="@+id/ivHeadPic"
+        android:layout_toRightOf="@+id/ivHeadPic"
+        android:layout_marginLeft="8dp" />
+
+    <TextView
+        android:id="@+id/labPlate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="labPlate"
+        style="@style/LabelNormalText"
+        android:layout_marginTop="4dp"
+        android:layout_alignBottom="@+id/ivHeadPic"
+        android:layout_alignLeft="@+id/labName" />
+
+    <ImageView
+        android:layout_width="@dimen/pic_small_head"
+        android:layout_height="@dimen/pic_small_head"
+        android:id="@+id/ivPhoneStatus"
+        android:visibility="gone"
+        android:src="@drawable/dd_icon_dh_2x"
+        android:scaleType="centerInside"
+        android:layout_alignTop="@+id/labAddress"
+        android:layout_alignParentRight="true" />
+    <TextView
+        android:text="委托"
+        android:layout_alignTop="@+id/labAddress"
+        android:gravity="center_vertical"
+        style="@style/RedFont"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/pic_small_head"
+        android:layout_height="@dimen/pic_small_head" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/linearLayout"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/labStatusText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_order_quote"
+            style="@style/LabelNormalText" />
+
+        <TextView
+            android:id="@+id/labManAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9"
+            style="@style/OrderQuoteTextStyle" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/LabelNormalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="出价"
+        android:layout_alignTop="@+id/labName"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/refBid" />
+    <TextView
+        style="@style/LabelNormalText"
+        android:id="@+id/refLevel"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等级"
+        android:layout_below="@+id/labName"
+        android:layout_centerHorizontal="true" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/labName"
+        android:layout_centerHorizontal="true"
+        android:layout_alignLeft="@+id/refLevel">
+        <RatingBar
+            android:id="@+id/rate_rating"
+            style="@style/roomRatingBar"
+            android:isIndicator="true"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:numStars="5"
+            android:rating="0" />
+    </LinearLayout>
+
+    <TextView
+        style="@style/LabelNormalText"
+        android:id="@+id/labLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text="435"
+        android:layout_below="@+id/labUnitPrice"
+         />
+
+    <TextView
+        style="@style/RedFont"
+        android:id="@+id/labUnitPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_text_size"
+        android:layout_marginLeft="6dp"
+        android:text="labUnitPrice"
+        android:layout_above="@+id/refLevel"
+        android:layout_toRightOf="@+id/refBid" />
+
+</RelativeLayout>

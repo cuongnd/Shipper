@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_marginBottom="@dimen/normal_divider_height"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/Lin_conllection_item"
+        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="@dimen/icon_very_small_h"
+            android:background="@color/orange_red"
+            android:layout_height="fill_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/deliverCollection"
+            android:padding="@dimen/button_login"
+            android:layout_margin="@dimen/normal_divider_height"
+            android:layout_marginLeft="@dimen/normal_divider_height"
+            style="@style/LabelNormalText" />
+        <LinearLayout android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:gravity="right|center_vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt_collection_numbs_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="0"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                style="@style/NormalText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="@string/lab_order_unit_man"
+                android:layout_marginRight="@dimen/dp_4"
+                style="@style/NormalText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:text="/"
+                android:layout_marginRight="@dimen/dp_4"
+                android:padding="@dimen/button_login"
+                style="@style/NormalText" />
+            <TextView
+                android:id="@+id/txt_collection_numbs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5"
+                style="@style/NormalText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_order_unit_man"
+                android:layout_marginRight="@dimen/normal_divider_height"
+                style="@style/NormalText" />
+            <ImageView
+                android:id="@+id/btnCollectionFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/normal_divider_height"
+                android:background="@color/trans"
+                android:src="@drawable/dd_icon_yl" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

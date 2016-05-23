@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 内容水平距中白底盒-->
+    <style name="BlankBox">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+    </style>
+    <!-- 灰底盒-->
+    <style name="GreyBox">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/bg_grey</item>
+    </style>
+
+    <!--左右间距盒子-->
+    <style name="PaddingBox">
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+
+
+    <!--区块的盒子-->
+    <style name="RegionBox">
+        <item name="android:background">@color/white</item>
+        <!--<item name="android:layout_marginTop">0.5dp</item>-->
+        <item name="android:layout_marginBottom">0.5dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+    </style>
+
+    <style name="RegionPaddingBox" parent="RegionBox">
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+
+    <style name="PicBox">
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="EndPicBox" parent="PicBox">
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+    <!--纯Icon容器-->
+    <style name="IconBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">38dp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <!-- 一般性的图标盒子-->
+    <style name="NormalIconBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <!-- 区块标签图标盒-->
+    <style name="RegionLabelIconBox">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">38dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <!--将图标位于未端的盒子，且霸占剩余左右空间-->
+    <style name="EndIconBox" parent="RegionIconBox">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center|right</item>
+    </style>
+    <!--Region区块的图标样式-->
+    <style name="RegionIconBox">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+    </style>
+    <!--文本标签盒-->
+    <style name="RegionLabelBox">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">118dp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_marginLeft">18dp</item>
+    </style>
+
+
+    <!--区块盒内除标签Icon后的行内容容盒-->
+    <style name="RegionRowBox">
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">6dp</item>
+    </style>
+    <!-- 仅可哲作内容的盒子-->
+    <style name="RegionRowBodyBox">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginLeft">18dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <!-- 对话框头部 -->
+    <style name="DialogHeaderBox">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_marginBottom">0.5dp</item>
+    </style>
+
+
+    <!-- 普通的有内容的盒子样式-->
+    <style name="NormalBox">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+    <!-- 内容盒子，内容默认距顶-->
+    <style name="ContentBox">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+    <!--纵列盒子，行间距-->
+    <style name="ColumnBox" parent="ContentBox">
+        <!-- 行间距1.5倍,下面的方法是在针对TextView时才起效的-->
+        <item name="android:lineSpacingMultiplier">1.5</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <!-- 有文本在其中的盒子-->
+    <style name="BoxWithTextIn">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <!-- 透明黑背36dp -->
+    <style name="BoxWithTransBlack" parent="BoxWithTextIn">
+        <item name="android:color">@color/white</item>
+        <item name="android:height">36dp</item>
+        <item name="android:background">@color/bg_trans_black</item>
+    </style>
+
+    <!-- 透明白背36dp -->
+    <style name="BoxWithTransWhite" parent="BoxWithTextIn">
+        <item name="android:height">36dp</item>
+        <item name="android:background">@color/bg_trans_white</item>
+    </style>
+
+
+    <!--有上下边线的白盒子-->
+    <style name="BoxWithEdge" parent="BlankBox">
+        <item name="android:layout_marginTop">0.5dp</item>
+        <item name="android:layout_marginBottom">0.5dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <!-- 一般的盒子样式-->
+    <style name="BoxNormalStyle" parent="BlankBox">
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+
+    <!-- Order Style and something others.-->
+    <!-- 订单文本盒子样式-->
+    <style name="OrderTextBoxStyle">
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+
+    <style name="SwitchItemBox" parent="RegionPaddingBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">30dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingRight">30dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:textSize">16sp</item>
+
+    </style>
+
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true" />
+
+    <LinearLayout
+        android:id="@+id/btnComment"
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/RegionLabelBox"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_margin="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/name_txt"
+                android:textColor="@color/black"
+                android:text="服务评价" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:gravity="right|center_vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:layout_height="fill_parent">
+            <RatingBar
+                android:id="@+id/rateStar"
+                style="@style/roomRatingBar"
+                android:isIndicator="false"
+                android:padding="0.3dp"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="25dp"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="0" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View style="@style/PersonalLine" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/txtComment"
+            style="@style/NormalFont"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="请输入您的评价详情"
+            android:padding="6dp"
+            android:text="" />
+
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/BlueSharpFillButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:text="@string/btn_confirm" />
+    </LinearLayout>
+</LinearLayout>

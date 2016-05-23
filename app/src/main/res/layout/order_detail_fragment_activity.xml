@@ -1,0 +1,232 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true" />
+
+    <include
+        android:id="@+id/Lin_collectionPerson"
+        layout="@layout/order_collection_person" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/order_sub_hackman" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/icon_very_small_h"
+                android:background="@color/bg_silver" />
+
+            <LinearLayout
+                android:id="@+id/LinBeaerList"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/normal_divider_height"
+                    android:textColor="@color/black"
+                    android:text="承运司机列表" />
+
+                <org.csware.ee.widget.ScrollViewForListView
+                    android:id="@+id/listViewBeaer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:divider="@color/bg_silver"
+                    android:dividerHeight="0.5dp">
+
+                </org.csware.ee.widget.ScrollViewForListView>
+
+                <LinearLayout
+                    android:id="@+id/LinShowMore"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/normal_divider_height"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/fh_icon_open" />
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:text="展开"
+                        android:textColor="@color/bg_blue" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <include
+                android:id="@+id/Lin_DetailAdress"
+                layout="@layout/label_sub_address" />
+
+            <LinearLayout
+                android:id="@+id/Lin_DetailAdressList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/normal_divider_height"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <include layout="@layout/payee_address_item" />
+
+                <org.csware.ee.widget.ScrollViewForListView
+                    android:id="@+id/listviewDetailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:cacheColorHint="@color/white"
+                    android:dividerHeight="0dp" />
+            </LinearLayout>
+
+            <include layout="@layout/label_sub_goods" />
+
+            <include layout="@layout/label_sub_time" />
+
+            <include layout="@layout/label_sub_pay" />
+            <!-- 保险-->
+            <LinearLayout
+                style="@style/RegionBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/RegionLabelIconBox"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/fh_icon_safe_blue" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/RegionRowBox">
+
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lab_insurance" />
+
+                    <LinearLayout
+                        android:id="@+id/optInsurance"
+                        style="@style/RegionRowBodyBox">
+
+                        <TextView
+                            android:id="@+id/labInsurance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:text=""
+                            android:textColor="@color/orange_red"
+                            android:textColorHint="@color/hint_face_color" />
+
+                        <TextView
+                            style="@style/NormalFont"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_zk"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/Lin_DetailConsignee"
+                layout="@layout/label_sub_consignee" />
+
+            <include layout="@layout/label_sub_memo" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/face_grey" />
+
+    <LinearLayout
+        android:id="@+id/LinPayTo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btnPay"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:background="@drawable/btn_wihte_sharp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pay_to"
+                android:textColor="@color/orange_red"
+                android:textSize="18sp" />
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/payPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/most_black"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnComment"
+            style="@style/BlueSharpFillButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:text="" />
+    </LinearLayout>
+
+</LinearLayout>

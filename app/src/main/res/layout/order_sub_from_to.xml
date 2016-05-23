@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/BoxNormalStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:id="@+id/Lin_deliverAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/labFromArea"
+            style="@style/OrderAreaTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="labFromArea" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/dd_icon_dz_2x" />
+
+        <TextView
+            android:id="@+id/labToArea"
+            style="@style/OrderAreaTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="labToArea" />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/LabelNormalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_order_id" />
+
+        <TextView
+            android:id="@+id/labOrderId"
+            style="@style/LabelSmallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="labOrderId" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/Lin_PayeeMineAddress"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <include layout="@layout/payee_address_item" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/BoxNormalStyle"
+        android:id="@+id/Lin_BidAdress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/RegionLabelIconBox"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/wyfh_icon_xxdz_2x" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_sent_address" />
+
+                <TextView
+                    android:id="@+id/labFromDetail"
+                    style="@style/NormalFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_horizontal"
+                    android:lines="2"
+                    android:text="labFromDetail" />
+
+            </LinearLayout>
+
+            <include layout="@layout/sub_divider_grey_horizontal" />
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_receive_address" />
+
+                <TextView
+                    android:id="@+id/labToDetail"
+                    style="@style/NormalFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:lines="2"
+                    android:text="labToDetail" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical"
+        android:id="@+id/Lin_BidAdressList"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_marginBottom="@dimen/normal_divider_height"
+        android:layout_height="wrap_content">
+        <org.csware.ee.widget.ScrollViewForListView
+            android:id="@+id/listviewBidAddress"
+            android:layout_width="match_parent"
+            android:cacheColorHint="@color/white"
+            android:dividerHeight="-1dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        style="@style/BoxNormalStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/wyfh_icon_hwlx_2x" />
+
+        <TextView
+            style="@style/LabelNormalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_goods_style" />
+
+        <TextView
+            android:id="@+id/labGoodsStyle"
+            style="@style/OrderRightTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="labGoodsStyle" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/wyfh_icon_dw_2x" />
+
+        <TextView
+            style="@style/LabelNormalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_total_amount" />
+
+        <TextView
+            android:id="@+id/labGoodsAmount"
+            style="@style/OrderRightTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="labGoodsAmount" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/LabelNormalText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/lab_order_display_detail" />
+    </LinearLayout>
+</LinearLayout>

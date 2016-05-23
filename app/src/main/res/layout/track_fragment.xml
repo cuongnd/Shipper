@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabOrder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/mapTrack"
+        layout="@layout/order_sub_track"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/order_track_map_height_lower" />
+
+
+    <!--<com.handmark.pulltorefresh.library.PullToRefreshListView-->
+        <!--android:id="@+id/listView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:divider="@color/bg_silver"-->
+        <!--android:dividerHeight="@dimen/normal_divider_height"-->
+        <!--android:drawSelectorOnTop="false"-->
+        <!--android:fadingEdge="none"-->
+        <!--android:fastScrollEnabled="false"-->
+        <!--android:footerDividersEnabled="false"-->
+        <!--android:headerDividersEnabled="false"-->
+        <!--android:smoothScrollbar="true"-->
+        <!--/>-->
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/bg_silver"
+            android:dividerHeight="@dimen/line_divider_height"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

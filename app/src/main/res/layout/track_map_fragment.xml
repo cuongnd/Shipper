@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabOrder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <org.csware.ee.view.TopActionBar
+        android:minHeight="48dp"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/RelFullMap"-->
+        <!--android:orientation="vertical"-->
+        <!--android:visibility="gone"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent">-->
+        <!--<com.baidu.mapapi.map.MapView-->
+            <!--android:id="@+id/fmapView"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:clickable="true" />-->
+        <!-- -->
+    <!--</RelativeLayout>-->
+    <LinearLayout
+        android:id="@+id/LinWrapMap"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/RelTextureTrack"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <com.baidu.mapapi.map.MapView
+                android:id="@+id/bmapView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:clickable="true" />
+            <LinearLayout
+                android:id="@+id/LinOrderInfo"
+                android:layout_width="fill_parent"
+                android:background="#60000000"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:layout_height="@dimen/dp_40">
+                <TextView
+                    android:id="@+id/labFrom"
+                    style="@style/WhiteFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_toRightOf="@+id/ivLocate"
+                    android:text="" />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@null"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/dd_icon_dz_white" />
+                <TextView
+                    android:id="@+id/labTo"
+                    style="@style/WhiteFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivLocate"
+                    android:text="" />
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/labGoodsType"
+                        style="@style/WhiteFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivLocate"
+                        android:text="" />
+                    <TextView
+                        android:id="@+id/labAmount"
+                        style="@style/WhiteFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivLocate"
+                        android:text="" />
+                    <TextView
+                        android:id="@+id/labUnit"
+                        style="@style/WhiteFont"
+                        android:layout_marginRight="@dimen/normal_divider_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ivLocate"
+                        android:text="" />
+                </LinearLayout>
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/FragMapTip"
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignBottom="@id/bmapView"
+                style="@style/BoxWithTransBlack">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_click_show_track"
+                    android:layout_gravity="center"
+                    style="@style/LabelWhiteText" />
+            </FrameLayout>
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/bg_silver"
+                android:dividerHeight="@dimen/line_divider_height"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+</LinearLayout>

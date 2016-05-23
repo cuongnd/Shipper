@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.csware.ee.shipper"
+    android:installLocation="auto"
+    android:versionCode="30"
+    android:versionName="2.1.3.1" >
+
+    <!-- TODO:权限设定 BEGIN -->
+    <!-- 【必须】 信鸽SDK所需权限 -->
+    <!--<uses-permission android:name="android.permission.RESTART_PACKAGES" />-->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <!--<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--&lt;!&ndash; 【可选】 信鸽SDK所需权限 &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.BLUETOOTH" />-->
+    <!--<uses-permission android:name="android.permission.BATTERY_STATS" />-->
+
+    <!-- 访问网络 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 访问sdcard -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 访问网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取电话状态，如号码等 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- WIFI状态及访问 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- 摄像头 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 视频、录音权限请求音频捕获权限 -->
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 打电话，收发短信 -->
+    <!-- <uses-permission android:name="android.permission.CALL_PHONE" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_SMS" /> -->
+    <!-- <uses-permission android:name="android.permission.SEND_SMS" /> -->
+
+
+    <!-- <uses-permission android:name = "android.permission.GET_TASKS"/> -->
+    <!-- 日志获取 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <!-- 百度地图添加所需权限 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- 读取联系人权限 -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.HARDWARE_TEST" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 定位添加所需权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- TODO:权限设定 END -->
+
+    <!--Jpush 相关权限-->
+    <permission
+        android:name="org.csware.ee.shipper.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+    <uses-permission android:name="org.csware.ee.shipper.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <!-- 全景地图添加屏幕及版本支持 -->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <!-- android:theme="@style/AppTheme" -->
+    <!-- android:screenOrientation="portrait" -->
+    <application
+        android:name=".app.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        tools:replace="android:icon, android:theme"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+
+        <!-- TODO:百度地图 BEGIN -->
+        <!-- 百度地图  KEY   VrkYNnaz6LmOHisLRvK7YA8r       D:4jfDTRqRfGqRfl16USeRuaNz-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="VrkYNnaz6LmOHisLRvK7YA8r" />
+        <!-- 百度地图定位Service -->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="com.baidu.location.service_v2.2" > -->
+            <!-- </action> -->
+            <!-- </intent-filter> -->
+        </service>
+        <!-- TODO:百度地图 BEGIN -->
+
+
+        <!-- TODO:信鸽相关 BEGIN -->
+        <!-- 【必须】 (2.30及以上版新增)展示通知的activity -->
+        <!-- 【必须】 exported设置为true -->
+        <!--<activity-->
+            <!--android:name="com.tencent.android.tpush.XGPushActivity"-->
+            <!--android:exported="true"-->
+            <!--android:theme="@android:style/Theme.Translucent" >-->
+            <!--<intent-filter>-->
+
+                <!--&lt;!&ndash; 若使用AndroidStudio，请设置android:name="android.intent.action" &ndash;&gt;-->
+                <!--<action android:name="android.intent.action" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--&lt;!&ndash; 【必须】 信鸽receiver广播接收 &ndash;&gt;-->
+        <!--<receiver-->
+            <!--android:name="com.tencent.android.tpush.XGPushReceiver"-->
+            <!--android:process=":xg_service_v2" >-->
+            <!--<intent-filter android:priority="0x7fffffff" >-->
+
+                <!--&lt;!&ndash; 【必须】 信鸽SDK的内部广播 &ndash;&gt;-->
+                <!--<action android:name="com.tencent.android.tpush.action.SDK" />-->
+                <!--<action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />-->
+                <!--&lt;!&ndash; 【必须】 系统广播：开屏和网络切换 &ndash;&gt;-->
+                <!--<action android:name="android.intent.action.USER_PRESENT" />-->
+                <!--<action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+
+                <!--&lt;!&ndash; 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service &ndash;&gt;-->
+                <!--<action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />-->
+                <!--<action android:name="android.intent.action.ACTION_POWER_CONNECTED" />-->
+                <!--<action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />-->
+            <!--</intent-filter>-->
+            <!--&lt;!&ndash; 【可选】 usb相关的系统广播，增强信鸽service的复活机会，请根据需要添加 &ndash;&gt;-->
+            <!--<intent-filter android:priority="0x7fffffff" >-->
+                <!--<action android:name="android.intent.action.MEDIA_UNMOUNTED" />-->
+                <!--<action android:name="android.intent.action.MEDIA_REMOVED" />-->
+                <!--<action android:name="android.intent.action.MEDIA_CHECKING" />-->
+                <!--<action android:name="android.intent.action.MEDIA_EJECT" />-->
+
+                <!--<data android:scheme="file" />-->
+            <!--</intent-filter>-->
+        <!--</receiver>-->
+        <!--&lt;!&ndash; 【必须】 信鸽service &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="com.tencent.android.tpush.service.XGPushService"-->
+            <!--android:exported="true"-->
+            <!--android:persistent="true"-->
+            <!--android:process=":xg_service_v2" />-->
+
+        <!--&lt;!&ndash; 【必须】 通知service，其中android:name部分要改为当前包名 &ndash;&gt;-->
+        <!--<service-->
+            <!--android:name="com.tencent.android.tpush.rpc.XGRemoteService"-->
+            <!--android:exported="true" >-->
+            <!--<intent-filter>-->
+
+                <!--&lt;!&ndash; 【必须】 请修改为当前APP名包.PUSH_ACTION，如demo的包名为：com.qq.xgdemo &ndash;&gt;-->
+                <!--<action android:name="org.csware.ee.shipper.PUSH_ACTION" />-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <!-- 已废弃，可删除之；若不删除也不会有任何副作用 -->
+        <!--
+            <service
+            android:name="com.tencent.android.tpush.service.XGDaemonService"
+            android:process=":qq_push_daemon" />
+        -->
+        <!-- 【可选】信鸽拉起其他APP应用，若应用在本地找不到可以自动下载 -->
+        <!--
+              <service
+            android:name="com.tencent.android.tpush.XGDownloadService"
+            android:enabled="true"
+            android:exported="false" />
+        -->
+
+
+
+
+        <!-- TODO:信鸽相关 END -->
+
+        <!--TODO: Jpush SDK核心-->
+        <!-- Rich push 核心功能 since 2.0.6-->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:theme="@style/MyDialogStyle"
+            android:exported="false" >
+        </activity>
+        <!-- Required SDK核心功能-->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="org.csware.ee.shipper" />
+            </intent-filter>
+        </activity>
+        <!-- Required  SDK核心功能-->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" >
+        </service>
+
+        <!-- Required SDK 核心功能-->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+
+            </intent-filter>
+        </service>
+        <!-- since 1.8.0 option 可选项。用于同一设备中不同应用的JPush服务相互拉起的功能。 -->
+        <!-- 若不启用该功能可删除该组件，将不拉起其他应用也不能被其他应用拉起 -->
+        <service
+            android:name="cn.jpush.android.service.DaemonService"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter >
+                <action android:name="cn.jpush.android.intent.DaemonService" />
+                <category android:name="org.csware.ee.shipper"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能-->
+        <receiver
+            android:name="cn.jpush.android.service.PushReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY" />   <!--Required  显示通知栏 -->
+                <category android:name="org.csware.ee.shipper" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <data android:scheme="package" />
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Required SDK核心功能-->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" />
+
+        <!-- User defined.  For test only  用户自定义的广播接收器-->
+        <receiver
+            android:name="org.csware.ee.shipper.receiver.JpushReceiver"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!--Required  用户注册SDK的intent-->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!--Required  用户接收SDK消息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!--Required  用户接收SDK通知栏信息的intent-->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!--Required  用户打开自定义通知栏的intent-->
+                <action android:name="cn.jpush.android.intent.ACTION_RICHPUSH_CALLBACK" /> <!--Optional 用户接受Rich Push Javascript 回调函数的intent-->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /><!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="org.csware.ee.shipper" />
+            </intent-filter>
+        </receiver>
+
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="642f474adc0719a9f24cf9d7" /> <!--  </>值来自开发者平台取得的AppKey  8ea2a29da5967f1439941458 642f474adc0719a9f24cf9d7-->
+
+        <!-- TODO:alipay SDK BEGIN -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <!-- TODO:alipay SDK END -->
+        <!-- TODO:Umeng SDK BEGIN-->
+        <meta-data android:value="56f8f7e367e58effda0019ba" android:name="UMENG_APPKEY"></meta-data>
+        <meta-data android:value="Channel ID" android:name="UMENG_CHANNEL"/>
+        <!-- TODO:Umeng SDK END-->
+        <!-- TODO:WxChat Pay BEGIN-->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            />
+        <!-- TODO:WxChat Pay END-->
+        <!-- TODO:WxChat Pay END-->
+        <activity
+            android:name=".LoadingActivity"
+            android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:scheme="wx7d0824d1d60affec"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/activity_title_login"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".RegisterActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/register"
+            android:launchMode="singleTask"
+            android:theme="@style/ContentOverlay"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity
+            android:name=".ForgotActivity"
+            android:alwaysRetainTaskState="true"
+            android:screenOrientation="portrait"
+            android:clearTaskOnLaunch="true"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/fitch_password"
+            android:launchMode="singleTask"
+            android:theme="@style/ContentOverlay"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+        <!--<activity-->
+            <!--android:name=".DemoActivity"-->
+            <!--android:label="@string/title_activity_demo" />-->
+        <activity
+            android:name=".SettingActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_setting" />
+        <activity
+            android:name=".MineActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_mine" />
+        <activity
+            android:name=".TabOrderFragment"
+            android:screenOrientation="portrait"
+            android:label="@string/tab_order" />
+        <!-- <activity -->
+        <!-- android:name=".MainFragmentActivity" -->
+        <!-- android:label="@string/app_name" /> -->
+        <activity
+            android:name=".OrderBidFragmentActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_bid_order" />
+        <activity
+            android:name=".DeliverFragmentActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/activity_title_deliver" />
+        <activity
+            android:name=".OrderDetailFragmentActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_order_detail" />
+        <activity
+            android:name=".UserShipperFragmentActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_user_detail" />
+        <activity
+            android:name=".UserWalletFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_user_wallet"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".UserFriendFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_user_friend"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".UserSettingFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_user_setting"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".UserHelpFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_user_setting"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".UserToolFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_user_setting"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".FreightFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_freight_fragment"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".UserPayToPlatformFragmentActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_pay_to_platform"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" />
+        <activity
+            android:name=".AddressFragmentActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopFromBottom" >
+
+            <!-- android:launchMode="singleTop" -->
+            <!-- android:alwaysRetainTaskState="true" -->
+            <!-- android:clearTaskOnLaunch="true" -->
+            <!-- android:configChanges="orientation|keyboardHidden" -->
+            <!-- android:windowSoftInputMode="stateHidden|adjustPan" -->
+        </activity>
+        <activity
+            android:name=".CropImageFragmentActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_crop_image_fragment" />
+        <activity
+            android:name=".BdMapActivity"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_bd_map" >
+        </activity>
+        <activity
+            android:name=".OrderCommentFragmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan"
+            android:label="@string/title_activity_order_comment_fragment" >
+        </activity>
+        <activity
+            android:name=".UserAuthFragmentActivity"
+            android:screenOrientation="portrait"
+            android:label="认证" >
+        </activity>
+        <activity
+            android:name=".MainTabFragmentActivity"
+            android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="jpush.testAction" />
+                <category android:name="jpush.testCategory" />
+            </intent-filter>
+        </activity>
+        <!--<activity-->
+            <!--android:name=".LocationFragmentActivity"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/PopFromBottom"-->
+            <!--android:label="@string/title_activity_location_fragment" >-->
+        <!--</activity>-->
+        <activity android:name=".DeliverSelectorAddressActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".AuthenticationActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".UserAuthActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".UserBeaerActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".UserBeaerInfoActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".EvaluationRecordsActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".DeliverFragmentConfirmActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name="org.csware.ee.widget.crop.CropImageActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".ImagePagerActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait"/>
+        <activity android:name=".EnlargePhotoActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".RotationActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".CropImageNewActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".DeliverCollectionFragmentActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" />
+        <activity android:name=".DeliverCollectionExtraFragmentActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" />
+        <activity android:name=".DeliverAddCollectionActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".OrderCollectionActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".PhotoActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".InsuranceActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".MessageActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay" />
+        <activity android:name=".AddCarModelFragmentActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/PopFromBottom"/>
+        <activity android:name=".AddHuifuCityModelFragmentActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/PopFromBottom"/>
+        <activity android:name=".WebViewActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".WebViewGameActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".WebViewOilActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" />
+        <activity android:name=".SelectBankActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".BindBankCardActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" android:screenOrientation="portrait" />
+        <activity android:name=".UserPayToBankActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustUnspecified|adjustResize|stateHidden" android:screenOrientation="portrait" />
+        <activity android:name=".PayResultActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".UserScoreShopActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".GameExchangeActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".UserGameActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".XWalkViewActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".MailListActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="stateHidden|adjustPan" android:screenOrientation="portrait" />
+        <activity android:name=".MailSearchActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".MailFromListActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterNewActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".UserAuthComPanyActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".UserFriendAddActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" android:theme="@style/ContentOverlay"/>
+        <activity android:name=".UserPayToDriverActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".UserPayMethodActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".BankCardInfoActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".UserRecordActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".UserRecordDetailActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".UserCouponsListActivity" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop"  android:windowSoftInputMode="adjustResize" android:screenOrientation="portrait" />
+        <activity android:name=".ChooseCoupon" android:alwaysRetainTaskState="true" android:clearTaskOnLaunch="true" android:configChanges="orientation|keyboardHidden" android:launchMode="singleTop" android:theme="@style/LineStyleBottom" android:windowSoftInputMode="stateHidden|adjustPan" />
+        <activity android:name="org.csware.ee.widget.zxing.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            />
+    </application>
+
+</manifest>

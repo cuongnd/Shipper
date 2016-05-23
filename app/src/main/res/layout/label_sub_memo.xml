@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    style="@style/RegionPaddingBox">
+
+    <LinearLayout
+        style="@style/RegionLabelIconBox"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wyfh_icon_bz" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/RegionRowBox"
+            >
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_memo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_grey"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            style="@style/RegionRowBox"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtMemo"
+                style="@style/NormalFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:padding="8dp"
+                android:text="txtMemo" />
+
+        </LinearLayout>
+        <HorizontalScrollView
+            android:id="@+id/selectimg_horizontalScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal" >
+
+                <GridView
+                    android:id="@+id/noScrollgridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fastScrollEnabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="0dp"
+                    android:scrollbars="none"
+                    android:scrollingCache="false"
+                    android:stretchMode="spacingWidthUniform"
+                    android:verticalSpacing="1dp" >
+                </GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/bg_grey"
+            android:orientation="vertical" />
+
+        <LinearLayout style="@style/RegionRowBox"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPressSay"
+                style="@style/WhiteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_click_play" />
+
+            <ImageButton
+                android:id="@+id/btnPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:background="@color/trans"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="6dp"
+                android:paddingTop="10dp"
+                android:src="@drawable/wyfh_icon_xj"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

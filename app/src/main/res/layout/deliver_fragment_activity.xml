@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+    <org.csware.ee.view.TopActionBar
+        android:minHeight="48dp"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canClose="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scroll_collection"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1">
+        <!--可滚动视图容器-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout android:id="@+id/Lin_deliverListAdress" android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <include
+                    layout="@layout/deliver_sub_collection"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="6dp"
+                android:paddingLeft="18dp"
+                android:paddingTop="16dp">
+
+                <TextView
+                    style="@style/CommentFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_not_null" />
+            </LinearLayout>
+
+            <include android:id="@+id/Lin_deliverAdress"
+                layout="@layout/deliver_sub_address" />
+
+
+            <include
+                android:id="@+id/Lin_sub_goods"
+                style="@style/RegionBox"
+                layout="@layout/deliver_sub_goods" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+
+            <include
+                android:id="@+id/Lin_sub_time"
+                style="@style/RegionBox"
+                layout="@layout/deliver_sub_time" />
+
+            <LinearLayout
+                android:id="@+id/Lin_collection"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="6dp"
+                    android:paddingLeft="18dp"
+                    android:paddingTop="16dp">
+
+                    <TextView
+                        style="@style/CommentFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_optional_content" />
+                </LinearLayout>
+
+
+                <include
+                    style="@style/RegionBox"
+                    layout="@layout/deliver_sub_pay" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp" />
+
+                <include
+                    android:id="@+id/Lin_sub_memo"
+                    style="@style/RegionBox"
+                    layout="@layout/deliver_sub_memo" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Lin_hackman"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <include
+                    style="@style/RegionBox"
+                    layout="@layout/deliver_sub_hackman" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+    <!-- 提交按钮-->
+    <Button
+        android:id="@+id/btnDeliver"
+        style="@style/BlueSharpFillButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="发布订单"/>
+</LinearLayout>

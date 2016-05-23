@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--订单-司机相关信息-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@null"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            style="@style/LabelFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/labOrderStatus" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            style="@style/LabelFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_order_id" />
+
+        <TextView
+            android:id="@+id/labOrderId"
+            style="@style/SmallLabelFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/boxHackman"
+        style="@style/RegionPaddingBox"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+            <org.csware.ee.view.CircleImageView
+                android:id="@+id/ivHeadPic"
+                android:layout_width="@dimen/pic_small_head"
+                android:layout_height="@dimen/pic_small_head"
+                android:src="@drawable/w_icon_tjzp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            style="@style/ColumnBox"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/BigFont"
+                android:id="@+id/labName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_phone"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            style="@style/ColumnBox"
+            android:layout_weight="1">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/labCPH" />
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/labPhoneNumber" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/Lin_order_sub_hackman_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnPhoneCall"
+                android:src="@mipmap/dd_icon_dh"
+                android:background="@null" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinContacts"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:id="@+id/imgSelectContact"
+            android:visibility="gone"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="@dimen/dp_20"
+            android:src="@mipmap/lxr_icon_unselected"/>
+        <LinearLayout android:orientation="horizontal"
+            android:id="@+id/LinSelect"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp">
+            <ImageView
+                android:id="@+id/imgGameHead"
+                android:padding="@dimen/normal_divider_height"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="@dimen/dp_4"
+                android:src="@drawable/w_icon_tjzp"/>
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="fill_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_height="0dp">
+                    <TextView
+                        android:id="@+id/txtConComp"
+                        style="@style/SmallFont"
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/LinRatItem"
+                    android:layout_width="fill_parent"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:layout_height="0dp">
+                    <RatingBar
+                        android:id="@+id/rate_rating"
+                        style="@style/roomRatingBar"
+                        android:isIndicator="true"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:numStars="5"
+                        android:stepSize="1"
+                        android:rating="3" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgPhoneCall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/dd_icon_dh"/>
+        <ImageView
+            android:id="@+id/imgBeaerStatus"
+            android:src="@drawable/dd_xj_ysz"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp" android:background="@color/bg_silver" />
+    <LinearLayout
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="@string/lab_price_mh" />
+
+            <TextView
+                android:id="@+id/labHPrice"
+                style="@style/RedBigFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/black"
+                android:id="@+id/labPriceUnit" />
+            <LinearLayout
+                android:layout_width="wrap_content" android:id="@+id/Lin_totalPrice"
+                android:layout_height="wrap_content" android:orientation="horizontal">
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/lab_total_price_mh" />
+
+                <TextView
+                    android:id="@+id/labTotalPrice"
+                    style="@style/RedFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="" />
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:id="@+id/labPriceExpress" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="end">
+
+            <TextView
+                style="@style/SmallLabelFont"
+                android:id="@+id/labHPayStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+            <TextView
+                style="@style/SmallLabelFont"
+                android:id="@+id/labHPayMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinReceipt"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_height="120dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receipt"
+            style="@style/LabelFont"
+            android:padding="4dp"
+            android:layout_marginLeft="2dp"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@color/black"/>
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingBottom="@dimen/icon_very_small_h"
+                android:orientation="horizontal" >
+
+                <GridView
+                    android:id="@+id/rptScrollgridview"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:fastScrollEnabled="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="0dp"
+                    android:scrollbars="none"
+                    android:scrollingCache="false"
+                    android:stretchMode="spacingWidthUniform"
+                    android:verticalSpacing="1dp" >
+                </GridView>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/icon_very_small_h"-->
+        <!--android:gravity="center_vertical|center_horizontal"-->
+        <!--android:orientation="horizontal">-->
+        <!--<Button-->
+            <!--android:id="@+id/btnComment"-->
+            <!--style="@style/BlueSharpFillButton"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/btn_comment" />-->
+    <!--</LinearLayout>-->
+</LinearLayout>

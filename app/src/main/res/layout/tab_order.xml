@@ -1,0 +1,104 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/orderTabMenuBox"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton
+                android:id="@+id/buttom_one"
+                style="@style/ButtomBarImgBtn"
+                android:background="@drawable/bar_news"
+                android:contentDescription="@string/tab_lab_quoting" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/bg_grey"></LinearLayout>
+
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton
+                android:id="@+id/buttom_two"
+                style="@style/ButtomBarImgBtn"
+                android:background="@drawable/bar_constact"
+                android:contentDescription="@string/tab_lab_shipping" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/bg_grey" />
+
+        <RelativeLayout style="@style/ButtomBar">
+            <ImageButton
+                android:id="@+id/buttom_three"
+                style="@style/ButtomBarImgBtn"
+                android:background="@drawable/bar_deynaimic"
+                android:contentDescription="@string/tab_lab_finished" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/orderTabMenuBox"
+        android:background="@color/bg_grey" />
+    <ScrollView
+        android:id="@+id/tabBody1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        ></ScrollView>
+    <FrameLayout
+        android:id="@+id/tabBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:background="@color/bg_grey">
+
+        <TextView
+            android:id="@+id/txtTest"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="TEST"/>
+
+        <!--<fragment android:name="org.csware.ee.shipper.fragment.OrderQuotingFragment"-->
+        <!--android:id="@+id/orderQuoting"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal" />-->
+
+        <!--<fragment android:name="org.csware.ee.shipper.fragment.OrderShippingFragment"-->
+        <!--android:id="@+id/orderShipping"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal" />-->
+
+        <!--<fragment android:name="org.csware.ee.shipper.fragment.OrderFinishedFragment"-->
+        <!--android:id="@+id/orderFinished"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:orientation="horizontal" />-->
+
+    </FrameLayout>>
+
+
+
+</RelativeLayout>

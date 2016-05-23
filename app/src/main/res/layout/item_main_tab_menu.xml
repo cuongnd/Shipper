@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--主TABMenu 菜单-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="3dp"
+
+    >
+    <!-- 未选中样式-->
+    <RelativeLayout
+        android:id="@+id/normalLayout"
+        style="@style/MainTabBoxStyle" >
+
+        <TextView
+            android:id="@+id/normalTV"
+            style="@style/MainTabTextStyle"
+            />
+
+        <ImageView
+            android:id="@+id/normalImg"
+            android:layout_above="@id/normalTV"
+            style="@style/MainTabIconStyle"
+             />
+    </RelativeLayout>
+
+    <!-- 选中样式-->
+    <RelativeLayout
+        android:id="@+id/selectedLayout"
+        style="@style/MainTabBoxStyle" >
+
+        <TextView
+            android:id="@+id/selectedTV"
+            style="@style/MainTabTextStyle"
+            />
+
+        <ImageView
+            android:id="@+id/selectedImage"
+            style="@style/MainTabIconStyle"
+            android:layout_above="@id/selectedTV"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

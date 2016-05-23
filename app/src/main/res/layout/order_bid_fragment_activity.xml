@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+    <!--android:id="@+id/btnShowDetail"-->
+    <org.csware.ee.view.TopActionBar
+        android:minHeight="48dp"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canClose="true"
+        />
+    <include android:id="@+id/Lin_collectionPerson"
+        layout="@layout/order_collection_person" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <!-- 订单概要-->
+            <include
+                android:id="@+id/btnShowDetail"
+                layout="@layout/order_sub_from_to"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <!--出价列表-->
+            <include
+                android:id="@+id/boxBidList"
+                layout="@layout/order_sub_bid_list"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+            <!--<android.support.v4.widget.SwipeRefreshLayout-->
+                <!--android:id="@+id/swipeRefresh"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <org.csware.ee.widget.ScrollViewForListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@color/white"
+                    android:divider="@color/bg_silver"
+                    android:dividerHeight="@dimen/line_divider_height"></org.csware.ee.widget.ScrollViewForListView>
+            <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+            <!--<com.handmark.pulltorefresh.library.PullToRefreshListView-->
+                <!--android:id="@+id/listview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:divider="@color/bg_silver"-->
+                <!--android:dividerHeight="@dimen/normal_divider_height"-->
+                <!--android:drawSelectorOnTop="false"-->
+                <!--android:fadingEdge="none"-->
+                <!--android:fastScrollEnabled="false"-->
+                <!--android:footerDividersEnabled="false"-->
+                <!--android:headerDividersEnabled="false"-->
+                <!--android:smoothScrollbar="true" />-->
+
+            <LinearLayout
+                style="@style/BoxNormalStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/btnDisplayDetail"
+                    style="@style/LabelNormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/lab_order_pull_refresh" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

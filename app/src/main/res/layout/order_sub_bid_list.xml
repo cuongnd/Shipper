@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@null"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        style="@style/BoxNormalStyle"
+        android:id="@+id/Lin_myBid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelNormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_order_mine_bid" />
+
+            <TextView
+                android:id="@+id/labUnitPrice"
+                style="@style/RedBigFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="labUnitPrice" />
+
+            <TextView
+                android:id="@+id/labPriceUnit"
+                style="@style/LabelSmallText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="labPriceUnit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|right"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelNormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lab_order_total_price" />
+
+            <TextView
+                android:id="@+id/labTotalPrice"
+                style="@style/RedFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="labTotalPrice" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/LabelNormalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/unit_rmb" />
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_bidHide"
+        android:padding="5dp"
+        android:visibility="gone"
+        android:text="@string/lab_bid_none"
+        android:gravity="center_horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        style="@style/BlankBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnOrderByDefault"
+            style="@style/DisableFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:enabled="false"
+            android:text="@string/tab_lab_order_default" />
+
+        <include layout="@layout/sub_divider_grey_vertical" />
+
+        <Button
+            android:id="@+id/btnOrderByCredit"
+            style="@style/DisableFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/tab_lab_order_credit" />
+
+        <include layout="@layout/sub_divider_grey_vertical" />
+
+        <Button
+            android:id="@+id/btnOrderByPrice"
+            style="@style/DisableFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:enabled="false"
+            android:text="@string/tab_lab_order_price" />
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--style="@style/BlankBox"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_weight="1">-->
+
+        <!--<com.handmark.pulltorefresh.library.PullToRefreshListView-->
+            <!--android:id="@+id/listView"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:divider="@color/bg_silver"-->
+            <!--android:dividerHeight="0.5dp"-->
+            <!--android:drawSelectorOnTop="false"-->
+            <!--android:fadingEdge="none"-->
+            <!--android:fastScrollEnabled="false"-->
+            <!--android:footerDividersEnabled="false"-->
+            <!--android:headerDividersEnabled="false"-->
+            <!--android:smoothScrollbar="true" />-->
+    <!--</LinearLayout>-->
+
+
+</LinearLayout>

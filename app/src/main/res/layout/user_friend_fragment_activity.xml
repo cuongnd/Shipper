@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true"
+        app:menuImage="@drawable/w_cysj_icon_bj" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/bg_silver"
+            android:dividerHeight="@dimen/line_divider_height"></ListView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <include android:id="@+id/LinAddFreind"
+        layout="@layout/user_friend_add_fragment" />
+    <FrameLayout
+        android:id="@+id/boxFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+
+    </FrameLayout>
+
+</LinearLayout>

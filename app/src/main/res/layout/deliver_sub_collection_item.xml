@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/Lin_imgAdress"
+        style="@style/RegionLabelIconBox"
+        android:layout_marginTop="0dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wyfh_icon_xxdz" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/normal_divider_height"
+            android:paddingRight="@dimen/normal_divider_height"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/Lin_AddPoints"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="invisible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:src="@mipmap/fh_icon_point" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:src="@mipmap/fh_icon_point" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/img_deliver_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/fh_icon_address" />
+
+            <LinearLayout
+                android:id="@+id/Lin_PayAddIcons"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/normal_divider_height"
+                    android:src="@mipmap/fh_icon_point" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_sent_address"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/optCollectionFrom"
+                    style="@style/RegionRowBodyBox"
+                    android:layout_marginLeft="@dimen/dp_4">
+
+                    <TextView
+                        android:id="@+id/labCollectionFrom"
+                        style="@style/NormalFont"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/hint_click_set_from_address"
+                        android:lines="1"
+                        android:textColorHint="@color/hint_face_color" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/btnCollectionFrom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/trans"
+                    android:src="@drawable/dd_icon_yl" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/bg_silver"
+                android:orientation="vertical"
+                android:visibility="visible" />
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtLabelName"
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_4"
+                    android:text="@string/deliver_AddCollection_mine" />
+
+                <LinearLayout
+                    android:id="@+id/optCollectionTo"
+                    style="@style/RegionRowBodyBox">
+
+                    <TextView
+                        android:id="@+id/labCollectionPhoneNo"
+                        style="@style/NormalFont"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/icon_very_small_h"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:lines="1"
+                        android:text=""
+                        android:textColor="@color/face_grey" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/trans"
+                    android:src="@drawable/dd_icon_yl"
+                    android:visibility="invisible" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:visibility="gone"
+                android:background="@color/bg_grey" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <org.csware.ee.widget.ScrollViewForListView
+        android:id="@+id/listViewAuto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/white"
+        android:dividerHeight="0.5dp" />
+</LinearLayout>

@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/RegionLabelBox"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NormalFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付宝账号" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/EndIconBox">
+
+            <EditText
+                android:id="@+id/txtAccount"
+                style="@style/NormalFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true"
+                android:hint="请输入您的支付宝账号"
+                android:text="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/RegionLabelBox"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NormalFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收款人姓名" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/EndIconBox">
+
+            <TextView
+                android:id="@+id/txtRealname"
+                style="@style/NormalFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:singleLine="true"
+                android:text="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <include layout="@layout/sub_item_withdraw" />
+
+
+</LinearLayout>

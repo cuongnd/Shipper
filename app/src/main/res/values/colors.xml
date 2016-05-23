@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- #背景色设定#-->
+    <!-- 主背景色-->
+
+    <color name="bg_blue">#ff00abef</color>
+    <!-- 银背，轻-->
+    <color name="bg_silver">#EAEAEA</color>
+    <!-- 灰背，重-->
+    <color name="bg_grey">#cccccc</color>
+
+    <!--透明黑色-->
+    <color name="bg_trans_black">#66333333</color>
+    <!-- 透明 银背，轻-->
+    <color name="bg_trans_white">#EEFFFFFF</color>
+
+    <!-- 无色-->
+    <color name="white">#ffffff</color>
+    <!-- 按下背景色-->
+    <color name="bg_press_blue">#145b7d</color>
+    <color name="bg_press_grey">#905E5E5E</color>
+
+
+    <!-- #前景色设定#-->
+    <color name="face_disable">#EAEAEA</color>
+    <color name="face_grey">#905E5E5E</color>
+    <color name="face_black">#222222</color>
+    <color name="face_blue">#ff00abef</color>
+    <color name="track_green">#0ad40a</color>
+
+    <!-- #功能色設定-->
+    <color name="hint_face_color">#d3d7d4</color>
+
+    <color name="button_grey">#d9d9d9</color>
+    <color name="remark_grey">#F9F9F9</color>
+
+    <color name="bg_darkblue">#3a3f4c</color>
+
+    <!-- #命名色设定#-->
+    <!-- 透明-->
+    <color name="trans">#00000000</color>
+    <color name="transparent">#00000000</color>
+    <!-- 无色-->
+    <color name="no_color">#00000000</color>
+
+    <!-- 小麦色 -->
+    <color name="wheat">#f5deb3</color>
+    <!-- 灰色 -->
+    <color name="grey">#808080</color>
+    <!-- 透明灰色 -->
+    <color name="tran_grey">#E9E9E9</color>
+    <!-- 亮蓝灰 -->
+    <color name="light_slate_grey">#778899</color>
+    <!--透明黑色-->
+    <color name="tran_black">#b0000000</color>
+    <!--黒橡-->
+    <color name="oak_black">#3e4145</color>
+    <!--纯黑-->
+    <color name="dark_black">#000000</color>
+    <color name="black">#000000</color>
+    <!-- 米黃色 -->
+    <color name="beige">#f5f5dc</color>
+    <!-- 金黄色 -->
+    <color name="gold_yellow">#ff9428</color>F
+    <!-- 亮粉红色 -->
+    <color name="orange">#ffa500</color>
+    <!-- 西红柿色 -->
+    <color name="orange_red">#ff4500</color>
+    <!-- 亮蓝色 -->
+    <color name="light_blue">#add8e6</color>
+
+    <color name="label_text_gray">#999999</color>
+    <color name="most_black">#333333</color>
+    <color name="title_gray_click">#2e364c</color>
+    <color name="default_prompt_gray">#CCCCCC</color>
+    <color name="text_tint">#808080</color>
+    <color name="text_dark">#333333</color>
+    <color name="text_transport">#FF5534</color>
+</resources>

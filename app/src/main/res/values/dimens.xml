@@ -1,0 +1,115 @@
+<resources>
+
+
+    <dimen name="content_padding_left">18dp</dimen>
+
+    <dimen name="order_track_map_height">360dp</dimen>
+    <dimen name="order_track_map_height_lower">300dp</dimen>
+
+    <!-- 间距-->
+    <dimen name="normal_divider_height">8dp</dimen>
+    <dimen name="line_divider_height">0.5dp</dimen>
+
+    <!-- #图形图象大小设定#-->
+    <!-- 默认的小图标高度设定-->
+    <dimen name="icon_small_h">20dp</dimen>
+	<dimen name="icon_very_small_h">10dp</dimen>
+
+    <!-- ##############文本大小设定 -->
+    <!-- 通用文本大小-->
+    <dimen name="small_text_size">12sp</dimen>
+    <!-- 通用文本大小-->
+    <dimen name="normal_text_size">14sp</dimen>
+
+    <!-- 标题文本大小-->
+    <dimen name="title_text_size">16sp</dimen>
+    
+    <!-- 标题文本大小-大-->
+    <dimen name="title_huge_text_size">18sp</dimen>
+
+    <!-- 页面上的輸入框文本大小-->
+    <dimen name="input_text_size">16sp</dimen>
+
+    <!--切页菜单文字大小-->
+    <dimen name="tab_item_text_size">9sp</dimen>
+
+    <dimen name="tab_icon_scale_size">36dp</dimen>
+
+    <!--切页菜单文字大小-->
+    <dimen name="btn_huge_text_size">22sp</dimen>
+    <!--特殊特大字体-->
+    <dimen name="big_huge_text_size">36sp</dimen>
+
+    <!--标签文字大小-->
+    <dimen name="lab_text_size">16sp</dimen>
+
+    <!--默认屏幕，margin边距-->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">0dp</dimen>
+    <dimen name="activity_vertical_margin">0dp</dimen>
+
+
+
+    <dimen name="pic_small_head">36dp</dimen>
+    <dimen name="pic_head">48dp</dimen>
+    <dimen name="pic_big_head">98dp</dimen>
+
+
+    <!-- Otehr 设定，待整理-->
+
+    <dimen name="pager_margin">45dp</dimen>
+    <dimen name="page_margin">15dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_50">50dp</dimen>
+    <dimen name="dp_70">70dp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="search_view_margin_left">55dp</dimen>
+    <dimen name="divider_height">2px</dimen>
+    <dimen name="view_pager_witdh">450dp</dimen>
+    <dimen name="view_pager_height">150dp</dimen>
+    <dimen name="image_width">300dp</dimen>
+    <dimen name="image_height">500dp</dimen>
+
+
+
+    <dimen name="release_textSize">16sp</dimen>
+    <dimen name="submit_margin_top">80dp</dimen>
+    <dimen name="dp_30">30dp</dimen>
+
+    <dimen name="login_margin_top">15dp</dimen>
+    <dimen name="button_login">5dp</dimen>
+
+    <dimen name="delete_action_len">90dip</dimen>
+
+
+    <dimen name="activity_11_size">11sp</dimen>
+    <dimen name="activity_12_size">12sp</dimen>
+    <dimen name="activity_13_size">13sp</dimen>
+    <dimen name="activity_14_size">14sp</dimen>
+    <dimen name="activity_15_size">15sp</dimen>
+    <dimen name="activity_16_size">16sp</dimen>
+    <dimen name="activity_18_size">18sp</dimen>
+    <dimen name="activity_19_size">19sp</dimen>
+    <dimen name="activity_20_size">20sp</dimen>
+    <dimen name="activity_22_size">22sp</dimen>
+    <dimen name="activity_24_size">24sp</dimen>
+    <dimen name="activity_26_size">26sp</dimen>
+    <dimen name="activity_28_size">28sp</dimen>
+
+    <dimen name="padding_distance3">3dp</dimen>
+    <dimen name="padding_distance5">5dp</dimen>
+    <dimen name="padding_distance8">8dp</dimen>
+    <dimen name="padding_distance10">10dp</dimen>
+    <dimen name="padding_distance12">12dp</dimen>
+    <dimen name="padding_distance13">13dp</dimen>
+    <dimen name="padding_distance15">15dp</dimen>
+    <dimen name="padding_distance20">20dp</dimen>
+    <dimen name="padding_distance25">25dp</dimen>
+    <dimen name="padding_distance30">30dp</dimen>
+    <dimen name="padding_distance35">35dp</dimen>
+    <dimen name="padding_distance40">40dp</dimen>
+    <dimen name="padding_distance50">50dp</dimen>
+</resources>

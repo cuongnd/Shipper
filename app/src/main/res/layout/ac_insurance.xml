@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/bg_silver"
+    android:layout_height="match_parent">
+    <org.csware.ee.view.TopActionBar
+        android:minHeight="@dimen/pic_head"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canClose="true"
+        />
+    <TextView
+        android:textColor="@color/orange_red"
+        android:text="@string/hint_optional_insurance"
+        android:paddingLeft="30dp"
+        android:gravity="center_vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/pic_head" />
+
+    <me.xiaopan.switchbutton.SwitchButton
+        android:id="@+id/chkInsurance"
+        style="@style/SwitchItemBox"
+        android:text="是否有包装"
+        android:textColor="@color/black"
+        app:frameDrawable="@drawable/switch_frame"
+        app:sliderDrawable="@drawable/selector_switch_slider"
+        app:stateDrawable="@drawable/selector_switch_state"
+        app:stateMaskDrawable="@drawable/switch_state_mask"
+        app:withTextInterval="16dp" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/Lin_goods_type"
+            android:background="@color/white"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/black"
+                android:text="@string/lab_goods_style"
+                android:textSize="@dimen/title_text_size"
+                android:paddingLeft="30dp"
+                android:paddingTop="@dimen/normal_divider_height"
+                android:paddingBottom="@dimen/normal_divider_height"
+                android:gravity="center_vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <org.csware.ee.widget.ScrollViewForGridView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@android:color/transparent"
+                android:verticalSpacing="@dimen/icon_very_small_h"
+                android:divider="@null"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:numColumns="3"
+                android:dividerHeight="0dp"/>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_marginTop="@dimen/icon_very_small_h"
+                android:layout_height="0.5dp" android:background="@color/bg_silver" />
+            <org.csware.ee.widget.ScrollViewForGridView
+                android:id="@+id/listItem"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="fill_parent"
+                android:listSelector="@android:color/transparent"
+                android:horizontalSpacing="@dimen/icon_very_small_h"
+                android:divider="@null"
+                android:numColumns="auto_fit"
+                android:dividerHeight="0dp"/>
+            <org.csware.ee.widget.FlowLayout
+                android:id="@+id/flowlayout"
+                android:layout_marginLeft="@dimen/icon_very_small_h"
+                android:layout_marginRight="@dimen/icon_very_small_h"
+                android:background="@color/white"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/recycler_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginLeft="7dp"-->
+                <!--android:layout_marginTop="5dp"-->
+                <!--android:scrollbars="vertical" />-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

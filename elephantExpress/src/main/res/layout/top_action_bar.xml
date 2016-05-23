@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/topBar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/top_bar_min_height"
+    android:background="@color/bg_darkblue"
+    android:gravity="center"
+    android:orientation="horizontal">
+    <!--返回按钮-->
+    <LinearLayout
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/top_bar_text_margin"
+        android:paddingRight="@dimen/top_bar_text_margin"
+        >
+        <!-- 返回图标-->
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back" />
+        <!--返回文本,默认隐藏-->
+        <TextView
+            android:id="@+id/labBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/top_bar_text_margin"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_bar_normal_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/labTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="@dimen/title_huge_text_size" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:paddingLeft="@dimen/top_bar_text_margin"
+        android:paddingRight="@dimen/top_bar_text_margin">
+        <!--如果有可能，即显示菜单文本.默认隐藏-->
+        <TextView
+            android:id="@+id/labMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/top_bar_text_margin"
+            android:text="@string/app_name"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/white"
+            android:textSize="@dimen/top_bar_normal_size" />
+        <!-- 右侧的菜单按钮-->
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:src="@drawable/w_cysj_icon_bj" />
+    </LinearLayout>
+</RelativeLayout>

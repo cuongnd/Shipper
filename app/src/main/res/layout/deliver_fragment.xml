@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+    <org.csware.ee.view.TopActionBar
+        android:minHeight="48dp"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canClose="true"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_weight="1">
+        <!--可滚动视图容器-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="6dp"
+
+                android:paddingTop="16dp">
+
+                <TextView
+                    android:id="@+id/txt_fragment_progress"
+                    style="@style/CommentFont"
+                    android:layout_marginLeft="18dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_not_null" />
+                <ProgressBar android:id="@+id/progressBar" android:layout_width="fill_parent" android:layout_height="5dp"
+                style="?android:attr/progressBarStyleHorizontal" android:progressDrawable="@drawable/progressbar_style"
+                android:progress="100" android:max="100" android:secondaryProgress="50"></ProgressBar>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <LinearLayout
+                    style="@style/RegionLabelIconBox"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wyfh_icon_xxdz" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        style="@style/RegionRowBox"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_sent_address" />
+
+                        <LinearLayout
+                            android:id="@+id/optFrom"
+                            style="@style/RegionRowBodyBox" >
+
+                            <TextView
+                                android:id="@+id/labFrom"
+                                style="@style/NormalFont"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center_vertical"
+                                android:background="@null"
+                                android:gravity="center_vertical"
+                                android:lines="2"
+                                android:textColorHint="@color/hint_face_color" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnFrom"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/trans"
+                            android:visibility="invisible"
+                            android:src="@drawable/wyfh_icon_wz" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/bg_grey"
+                        android:orientation="vertical" />
+
+                    <LinearLayout
+                        style="@style/RegionRowBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_receive_address" />
+
+                        <LinearLayout
+                            android:id="@+id/optTo"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/labTo"
+                                style="@style/NormalFont"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:background="@null"
+                                android:lines="2"
+                                android:textColorHint="@color/hint_face_color" />
+                        </LinearLayout>
+
+                        <ImageButton
+                            android:id="@+id/btnTo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/trans"
+                            android:visibility="invisible"
+                            android:src="@drawable/wyfh_icon_wz" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp" android:background="@color/bg_silver" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_hwlx" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegionRowBox"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_goods_style" />
+
+                        <LinearLayout
+                            android:id="@+id/optGoodsStyle"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/labGoodsStyle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/opt_orange_red"
+                                android:text="@string/lab_carload"
+                                style="@style/EdgeOnFont" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                android:src="@drawable/wyfh_icon_zk" />
+
+                        </LinearLayout>
+
+                        <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:background="@color/bg_grey"-->
+                        <!--/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:id="@+id/boxGoodsAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/wyfh_icon_dw" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegionRowBox"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_goods_amount" />
+
+                        <LinearLayout
+                            android:id="@+id/optAmount"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/labAmount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:maxLength="10"
+                                android:text=""
+                                android:textColorHint="@color/hint_face_color"
+                                style="@style/NormalFont" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                android:src="@drawable/wyfh_icon_zk" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--配送方式-->
+                <LinearLayout
+
+                    style="@style/RegionBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/wyfh_icon_phfs" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegionRowBox"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_trans_type" />
+
+                        <LinearLayout
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/radZC"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/opt_orange_red"
+                                android:text="@string/lab_carload"
+                                style="@style/EdgeOnFont" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                android:src="@drawable/wyfh_icon_zk" />
+
+                        </LinearLayout>
+
+                        <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="1dp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:background="@color/bg_grey"-->
+                        <!--/>-->
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp" android:background="@color/bg_silver" />
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:src="@drawable/wyfh_icon_cx" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegionRowBox"
+                        android:orientation="horizontal">
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_truck_type_length" />
+
+                        <LinearLayout
+                            android:id="@+id/optTruckStyle"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/txt_deliver_models"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                style="@style/EdgeOnFont"
+                                android:text="@string/lab_carload" />
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/txt_deliver_lengths"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                style="@style/EdgeOnFont"
+                                android:text="@string/lab_vehicle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.5dp" android:background="@color/bg_silver" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" android:orientation="vertical">
+                <!-- 货物类型-->
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_fh" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/RegionRowBox">
+
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_sent_time" />
+
+                        <LinearLayout
+                            android:id="@+id/optBeginTime"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                style="@style/NormalFont"
+                                android:id="@+id/labBeginTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColorHint="@color/hint_face_color" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                android:src="@drawable/wyfh_icon_zk" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!-- 货物数量-->
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_dh" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/RegionRowBox">
+
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_receive_time" />
+
+                        <LinearLayout
+                            android:id="@+id/optEndTime"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                style="@style/NormalFont"
+                                android:id="@+id/labEndTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:text=""
+                                android:textColorHint="@color/hint_face_color" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                android:src="@drawable/wyfh_icon_zk" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_fkfs" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/RegionRowBox">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_pay_method" />
+
+                        <LinearLayout
+                            android:id="@+id/optPayMethod"
+                            style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/labPayMethod"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                style="@style/EdgeOnFont"
+                                 />
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content" />
+                            <TextView
+                                android:id="@+id/labPayTime"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:button="@null"
+                                style="@style/EdgeOnFont"
+                                />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:visibility="invisible"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/wyfh_icon_zk" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:id="@+id/Lin_CollectionName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_shr" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegionRowBox">
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_consignee" />
+
+                        <LinearLayout style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/txtName"
+                                style="@style/NormalFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:singleLine="true"
+                                android:textColorHint="@color/hint_face_color" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <ImageView
+                                android:id="@+id/btnName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="invisible"
+                                android:src="@drawable/wyfh_icon_txl" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    style="@style/RegionBox"
+                    android:id="@+id/Lin_CollectionPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        style="@style/RegionLabelIconBox"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/wyfh_icon_lxfs" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        style="@style/RegionRowBox">
+
+                        <TextView
+                            style="@style/LabelFont"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lab_consignee_phone" />
+
+                        <LinearLayout style="@style/RegionRowBodyBox">
+
+                            <TextView
+                                android:id="@+id/txtPhone"
+                                style="@style/NormalFont"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@null"
+                                android:inputType="phone"
+                                android:maxLength="11"
+                                android:textColorHint="@color/hint_face_color" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/RegionBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    style="@style/RegionLabelIconBox"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/wyfh_icon_jg" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/RegionRowBox">
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lab_price" />
+
+                    <LinearLayout
+                        android:id="@+id/optPrice"
+                        style="@style/RegionRowBodyBox">
+
+                        <TextView
+                            android:id="@+id/labPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColorHint="@color/hint_face_color" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="invisible"
+                            android:src="@drawable/wyfh_icon_zk" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="20dp" />
+            <LinearLayout android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/Lin_totalPrice"
+                    android:orientation="horizontal"
+                    android:gravity="right"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:baselineAligned="false">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:text="总价："
+                            style="@style/NormalFont" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:layout_marginRight="6dp"
+                        android:baselineAligned="true">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/orange_red"
+                            android:text="--.--"
+                            android:id="@+id/labTotalPrice" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="false">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="元"
+                            android:layout_marginRight="16dp"
+                            style="@style/NormalFont" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="right"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginRight="16dp"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:id="@+id/txt_deliver_payModel"
+                        android:text="@string/lab_pay_method"
+                        style="@style/NormalFont"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:layout_marginLeft="16dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="@string/lab_page_tip"
+                    style="@style/LabelFont"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <!-- 提交按钮-->
+    <Button
+        android:id="@+id/btnDeliver"
+        style="@style/BlueSharpFillButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="确认订单"/>
+</LinearLayout>

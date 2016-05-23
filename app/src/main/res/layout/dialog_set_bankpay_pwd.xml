@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/trans"
+    android:orientation="vertical">
+    <!--设置支付密码-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/labTip"
+                style="@style/NormalFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/title_huge_text_size"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:text="@string/tip_first_withdraw" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/icon_very_small_h"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/Lin_withdraw_fragment_paymoney"
+                android:gravity="center_horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="金额："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_withdraw_fragment_setmoney"
+                    android:text="--.--"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/orange_red"
+                    android:textSize="@dimen/title_huge_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="@string/unit_rmb"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Lin_withdraw_fragment_payaccount"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/normal_divider_height"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="付款给"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_withdraw_fragment_user"
+                    android:textColor="@color/orange_red"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_withdraw_fragment_AlipayOrBankcard"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/txt_withdraw_fragment_account"
+                    android:textColor="@color/orange_red"
+                    android:maxLength="16"
+                    android:textSize="@dimen/title_text_size"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <com.jungly.gridpasswordview.GridPasswordView
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginTop="@dimen/icon_very_small_h"
+                android:layout_marginBottom="@dimen/icon_very_small_h"
+                app:passwordLength="6"
+                app:passwordType="numberPassword" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:gravity="right"
+            android:paddingRight="@dimen/content_padding_left"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="忘记支付密码？"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:textColor="@color/face_grey"
+                android:textSize="@dimen/normal_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/txtCallWaiter"
+                android:text="联系客服"
+                android:textColor="@color/bg_blue"
+                android:textSize="@dimen/title_text_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:orientation="horizontal">
+
+            <Button
+                style="@style/GreySharpFillButton"
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_cancel"
+                android:layout_weight="1" />
+
+            <Button
+                style="@style/RedSharpFillButton"
+                android:id="@+id/btnConfirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_confirm"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

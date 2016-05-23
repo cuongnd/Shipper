@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/trans" />
+
+    <!--//设置边距-->
+    <padding
+        android:bottom="2dp"
+        android:left="0dp"
+        android:right="0dp"
+        android:top="0dp" />
+
+    <!--//控制边界线颜色和笔触大小-->
+    <stroke
+        android:width="1.2dp"
+        android:color="@color/grey" />
+
+    <!--//控制圆角大小-->
+    <corners android:radius="0dp" />
+
+</shape>

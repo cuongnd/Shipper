@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@mipmap/loading"
+    android:orientation="vertical">
+
+    <!-- 软件版本 -->
+    <!--android:src="@drawable/ver"-->
+
+    <ImageView
+        android:id="@+id/app_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dip"
+        android:layout_marginTop="15dip"
+        >
+    </ImageView>
+    <!-- 背景布局-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <!-- Logo图片-->
+        <!--android:src="@drawable/logo"-->
+
+        <ProgressBar
+            android:id="@+id/loadingBar"
+            style="?android:attr/progressBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWelcome"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/app_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="140dp"
+            android:layout_marginTop="200dp"
+            android:longClickable="false"
+            android:src="@mipmap/loading_logo"
+            android:visibility="gone">
+        </ImageView>
+
+        <!-- 开发者消息-->
+        <!--android:src="@drawable/dev"-->
+        <ImageView
+            android:id="@+id/app_dev"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="35dip"
+            android:layout_marginRight="5dip"
+            android:visibility="gone"
+            >
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txtWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_logo"
+            android:layout_centerHorizontal="true"
+            android:text="@string/app_welcome"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/txtLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loadingBar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/dialog_loading"
+            android:textColor="@color/face_grey"
+            android:textSize="12dp"
+            android:visibility="gone"/>
+        <!-- 下载Loading进度-->
+    </RelativeLayout>
+</LinearLayout>  

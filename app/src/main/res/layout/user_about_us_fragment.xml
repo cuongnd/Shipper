@@ -1,0 +1,128 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ae="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/top_bar_title"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="@dimen/title_height"-->
+        <!--android:background="@color/bg_darkblue" >-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="fill_parent"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:gravity="center"-->
+            <!--android:text="@string/title_about_us"-->
+            <!--android:textColor="#ffffff"-->
+            <!--android:textSize="@dimen/title_huge_text_size" />-->
+
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/back_img"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="@drawable/bg_gray"-->
+            <!--android:padding="14dp"-->
+            <!--android:src="@drawable/tool_bar_icon_back_2x"-->
+            <!--android:textColor="#ffffff" />-->
+
+    <!--</RelativeLayout>-->
+
+
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/logo_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/logo_mip"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="25dp"
+                    />
+
+            </RelativeLayout>
+
+            <!--第一段-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:padding="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/label_text_gray"
+                    android:textSize="@dimen/title_text_size"
+                    android:text="@string/about_a"
+                    />
+            </LinearLayout>
+
+            <!--第二段-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:padding="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/label_text_gray"
+                    android:textSize="@dimen/title_text_size"
+                    android:text="@string/about_b"
+                    />
+            </LinearLayout>
+
+
+
+            <!--第三段-->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:padding="6dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/label_text_gray"
+                    android:textSize="@dimen/title_text_size"
+                    android:text="@string/about_c"
+                    />
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>

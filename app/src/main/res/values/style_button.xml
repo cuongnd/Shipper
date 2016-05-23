@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 填充型按钮-->
+    <style name="FillButton">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+    <!-- 蓝色填充按钮-->
+    <style name="BlueFillButton" parent="FillButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_blue</item>
+    </style>
+    <!-- 灰色填充按钮-->
+    <style name="GreyFillButton" parent="FillButton">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_grey</item>
+    </style>
+    <!-- 蓝色填充按钮-->
+    <style name="BlueFillMarginButton" parent="BlueFillButton">
+        <item name="android:layout_margin">8dp</item>
+    </style>
+    <!-- 灰色填充按钮-->
+    <style name="GreyFillMarginButton" parent="GreyFillButton">
+        <item name="android:layout_margin">8dp</item>
+
+    </style>
+
+
+
+
+    <!-- 蓝色直角填充按钮-->
+    <style name="BlueSharpFillButton" parent="FillButton">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/btn_blue_sharp</item>
+    </style>
+    <!-- 白色直角填充按钮-->
+    <style name="WhiteSharpFillButton" parent="FillButton">
+        <item name="android:textColor">@color/face_blue</item>
+        <item name="android:background">@drawable/btn_wihte_sharp</item>
+    </style>
+    <!--灰色直角填充按钮-->
+    <style name="GreySharpFillButton" parent="FillButton">
+        <item name="android:textColor">@color/face_grey</item>
+        <item name="android:background">@drawable/btn_grey_sharp</item>
+    </style>
+    <!--红色直角填充按钮-->
+    <style name="RedSharpFillButton" parent="BlueSharpFillButton">
+        <item name="android:background">@drawable/btn_red_sharp</item>
+    </style>
+
+    <!-- 白按钮-->
+    <style name="WhiteButton">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:background">@drawable/btn_white</item>
+    </style>
+    <!--橙色文本按钮-->
+    <style name="OrangeTextButton">
+        <item name="android:background">@null</item>
+        <item name="android:padding">6dp</item>
+        <item name="android:textColor">@color/orange_red</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+
+    <style name="RadioItem">
+        <item name="android:padding">8dp</item>
+        <!-- 当前样式不起作用，不知为什么-->
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/radio_bg</item>
+        <item name="android:textColor">@color/radio_tag</item>
+        <item name="android:button">@null</item>
+    </style>
+
+    <style name="RatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/room_rating_bar</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">18dp</item>
+    </style>
+    <style name="roomRatingBar"
+        parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/room_rating_bar</item>
+        <item name="android:minHeight">18dp</item>
+        <item name="android:maxHeight">18dp</item>
+    </style>
+
+</resources>

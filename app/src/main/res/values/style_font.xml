@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 只有红色强调的，才有左右边距-->
+    <style name="RedBigFont">
+        <item name="android:layout_marginLeft">3dp</item>
+        <item name="android:layout_marginRight">3dp</item>
+        <item name="android:textColor">@color/orange_red</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!--红字-->
+    <style name="RedFont" parent="NormalFont">
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textColor">@color/orange_red</item>
+    </style>
+    <!--红字-->
+    <style name="BlueFont" parent="NormalFont">
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+        <item name="android:textColor">@color/bg_blue</item>
+    </style>
+
+    <style name="GreyBigFont" parent="GreyFont">
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+    <style name="GreyFont" parent="NormalFont">
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+
+    <!-- 比正常字稍小的Label-->
+    <style name="SmallLabelFont" parent="LabelFont">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:layout_marginLeft">2dp</item>
+        <item name="android:layout_marginRight">2dp</item>
+    </style>
+    <!-- 注释文本-->
+    <style name="CommentFont" parent="LabelFont">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="MiddleFont" parent="LabelFont">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+    </style>
+    <!-- 普通标签文本-->
+    <style name="LabelFont" parent="BaseFont">
+        <item name="android:textColor">@color/face_grey</item>
+    </style>
+    <!-- 普通白字文本-->
+    <style name="WhiteFont" parent="BaseFont">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- 普通灰字文本-->
+    <style name="GreyGameFont" parent="BaseFont">
+        <item name="android:textColor">@color/grey</item>
+    </style>
+    <style name="HugeWhiteFont" parent="WhiteFont">
+        <item name="android:textSize">22sp</item>
+    </style>
+    <style name="SmallWhiteFont" parent="WhiteFont">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <!-- 普通文本-->
+    <style name="IconFont" parent="SmallFont">
+        <item name="android:padding">8dp</item>
+    </style>
+    <style name="NormalFont" parent="BaseFont">
+        <item name="android:textColor">@color/face_black</item>
+    </style>
+    <style name="SmallFont" parent="BaseFont">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/face_black</item>
+    </style>
+    <style name="BigFont" parent="NormalFont">
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="HintFont" parent="BaseFont">
+        <item name="android:textColor">@color/hint_face_color</item>
+    </style>
+
+    <style name="DisableFont">
+        <item name="android:textColor">@color/face_disable</item>
+    </style>
+    <!--标题文本-->
+    <style name="TitleFont" parent="NormalFont">
+        <item name="android:textSize">22sp</item>
+    </style>
+
+
+    <style name="BaseFont">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+    </style>
+
+    <!--可选文本变成按钮的样式-->
+    <style name="EdgeOnFont">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/orange_red</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@drawable/opt_orange_red</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="EdgeOffFont">
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:layout_margin">3dp</item>
+        <item name="android:background">@drawable/opt_grey</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+    <style name="MailOnFont">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/bg_blue</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/opt_blue</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+    </style>
+    <style name="MailToFont">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:background">@drawable/btn_blue</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="FreightFont" parent="WhiteFont">
+        <item name="android:textSize">36sp</item>
+    </style>
+    <style name="GameFocusFont" >
+        <item name="android:textSize">36sp</item>
+        <item name="android:textColor">@color/orange_red</item>
+    </style>
+</resources>

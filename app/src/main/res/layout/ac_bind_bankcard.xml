@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg_silver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <org.csware.ee.view.TopActionBar
+        android:minHeight="48dp"
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:canClose="true"
+        />
+    <LinearLayout
+        android:id="@+id/Lin_SetPass"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/Lin_PassNull"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                style="@style/RegionPaddingBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_marginLeft="@dimen/normal_divider_height"
+                    android:textColor="@color/black"
+                    android:text="创建密码" />
+
+                <EditText
+                    android:paddingLeft="26dp"
+                    android:id="@+id/txtSetPassword"
+                    android:layout_width="0.0dp"
+                    android:layout_weight="5.5"
+                    android:background="@null"
+                    android:hint="@string/hint_set_your_password"
+                    android:inputType="textPassword|phone"
+                    android:maxLength="6"
+                    style="@style/NormalFont"
+                    android:textColorHint="@color/hint_face_color"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                style="@style/RegionPaddingBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_marginLeft="@dimen/normal_divider_height"
+                    android:textColor="@color/black"
+                    android:text="@string/lab_password_confirm" />
+
+                <EditText
+                    android:paddingLeft="26dp"
+                    android:id="@+id/txtPasswordConfirm"
+                    android:layout_width="0.0dp"
+                    android:layout_weight="5.5"
+                    android:background="@null"
+                    android:hint="@string/hint_confirm_your_password"
+                    android:inputType="textPassword|phone"
+                    android:maxLength="6"
+                    style="@style/NormalFont"
+                    android:textColorHint="@color/hint_face_color"
+                    />
+
+            </LinearLayout>
+            <TextView
+                android:text="*密码必须为6位数字"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:textColor="@color/orange_red"
+                android:textSize="@dimen/small_text_size"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            style="@style/RegionPaddingBox"
+            android:id="@+id/LinPassSure"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/LabelFont"
+                android:layout_marginLeft="@dimen/normal_divider_height"
+                android:textColor="@color/black"
+                android:text="密码核实" />
+
+            <EditText
+                android:paddingLeft="26dp"
+                android:id="@+id/txtPasswordSure"
+                android:layout_width="0.0dp"
+                android:layout_weight="5.5"
+                android:background="@null"
+                android:hint="请输入您的交易密码"
+                android:inputType="textPassword|phone"
+                android:maxLength="6"
+                style="@style/NormalFont"
+                android:textColorHint="@color/hint_face_color"
+                />
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSetPass"
+            android:layout_marginTop="@dimen/dp_20"
+            style="@style/BlueSharpFillButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提交" />
+    </LinearLayout>
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:layout_width="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/LinBindName"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textColor="@color/black"
+                        android:text="持卡人：" />
+
+                    <EditText
+                        android:paddingLeft="26dp"
+                        android:id="@+id/txtBindName"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        android:hint="@string/tip_bankcardName"
+                        android:maxLength="32"
+                        style="@style/NormalFont"
+                        android:textColorHint="@color/hint_face_color"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:id="@+id/LinBindTwo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="invisible"
+                    android:paddingTop="0dp"
+                    android:paddingBottom="0dp"
+                    android:background="@color/bg_silver"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textColor="@color/black"
+                        android:visibility="invisible"
+                        android:text="持卡人：" />
+
+                    <TextView
+                        android:paddingLeft="26dp"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        style="@style/NormalFont"
+                        android:layout_height="@dimen/dp_20"
+                        android:text="@string/bind_once"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/small_text_size"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textColor="@color/black"
+                        android:text="身份证：" />
+
+                    <EditText
+                        android:paddingLeft="26dp"
+                        android:id="@+id/txtBindCard"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        android:hint="@string/tip_bankcardID"
+                        android:maxLength="32"
+                        style="@style/NormalFont"
+                        android:textColorHint="@color/hint_face_color"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/LinBindOne"
+                style="@style/RegionPaddingBox"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:visibility="invisible"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:background="@color/bg_silver"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_marginLeft="@dimen/normal_divider_height"
+                    android:textColor="@color/black"
+                    android:visibility="invisible"
+                    android:text="持卡人：" />
+
+                <TextView
+                    android:paddingLeft="26dp"
+                    android:layout_width="0.0dp"
+                    android:layout_weight="5.5"
+                    android:background="@null"
+                    style="@style/NormalFont"
+                    android:layout_height="@dimen/dp_20"
+                    android:text="@string/bind_once"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/small_text_size"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/Lin_BindCard"
+                android:visibility="visible"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:id="@+id/Lin_select_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textSize="@dimen/title_text_size"
+                        android:textColor="@color/black"
+                        android:text="银行" />
+                    <TextView
+                        style="@style/LabelFont"
+                        android:paddingLeft="0dp"
+                        android:layout_marginRight="2dp"
+                        android:visibility="invisible"
+                        android:text="卡号" />
+                    <TextView
+                        android:paddingLeft="26dp"
+                        android:id="@+id/txtBankName"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        android:hint="点击设置银行卡"
+                        android:maxLength="32"
+                        style="@style/NormalFont"
+                        android:textColorHint="@color/hint_face_color"
+                        />
+                    <LinearLayout
+                        style="@style/RegionIconBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/dd_icon_yl" />
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size"
+                        android:text="卡号" />
+                    <TextView
+                        style="@style/LabelFont"
+                        android:paddingLeft="0dp"
+                        android:layout_marginRight="2dp"
+                        android:visibility="invisible"
+                        android:text="卡号" />
+
+                    <EditText
+                        android:paddingLeft="26dp"
+                        android:id="@+id/txtBankCard"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:hint="银行卡号"
+                        android:maxLength="32"
+                        style="@style/NormalFont"
+                        android:textColorHint="@color/hint_face_color"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size"
+                        android:text="开户地址" />
+                    <TextView
+                        style="@style/LabelFont"
+                        android:paddingLeft="0dp"
+                        android:layout_marginRight="2dp"
+                        android:visibility="invisible"
+                        android:text="" />
+
+                    <TextView
+                        android:paddingLeft="26dp"
+                        android:id="@+id/txtBankAddress"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:hint="开户地址信息"
+                        style="@style/NormalFont"
+                        android:textColorHint="@color/hint_face_color"
+                        />
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/RegionPaddingBox"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/LabelFont"
+                        android:layout_marginLeft="@dimen/normal_divider_height"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/title_text_size"
+                        android:text="手机号：" />
+
+                    <EditText
+                        android:paddingLeft="26dp"
+                        android:id="@+id/txtBankPhone"
+                        android:layout_width="0.0dp"
+                        android:layout_weight="5.5"
+                        android:background="@null"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:hint="填写您预留银行的手机号"
+                        style="@style/NormalFont"
+                        android:textColorHint="@color/hint_face_color"
+                        />
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/txtBankPaper"
+                    android:text="《支付银行列表及限额》"
+                    android:layout_marginLeft="@dimen/normal_divider_height"
+                    android:textColor="@color/bg_blue"
+                    android:layout_marginTop="@dimen/normal_divider_height"
+                    android:textSize="@dimen/small_text_size"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btnBindBank"
+        android:layout_marginTop="@dimen/dp_20"
+        style="@style/BlueSharpFillButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交" />
+</LinearLayout>

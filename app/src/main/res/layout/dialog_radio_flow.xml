@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flowlayout="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/outmost_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+    android:orientation="vertical">
+
+    <include layout="@layout/dialog_header" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="36dp"
+        android:paddingBottom="58dp"
+        >
+
+        <!--<RadioGroup-->
+            <!--android:id="@+id/radGroup"-->
+            <!--style="@style/RegionBox"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+           <!-->-->
+
+            <com.liangfeizc.flowlayout.FlowLayout
+                android:id="@+id/flowBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                flowlayout:horizontal_spacing="10dp"
+                flowlayout:vertical_spacing="10dp" />
+
+        <!--</RadioGroup>-->
+
+    </FrameLayout>
+
+
+</LinearLayout>

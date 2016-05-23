@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/outmost_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_silver"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            style="@style/RegionBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/RegionLabelIconBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_price_style" />
+
+                <RadioGroup
+                    android:id="@+id/radGroup"
+                    style="@style/RegionRowBodyBox"
+                    android:layout_marginLeft="@dimen/icon_very_small_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/radTruck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/normal_divider_height"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:checked="true"
+                        android:text="@string/lab_price_style_truck"
+                        android:textColor="@color/radio_tag" />
+
+                    <!--<TextView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+
+                    <RadioButton
+                        android:id="@+id/radTone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/normal_divider_height"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:text="@string/lab_price_style_ton"
+                        android:textColor="@color/radio_tag" />
+
+                    <!--<TextView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="wrap_content" />-->
+
+                    <RadioButton
+                        android:id="@+id/radCube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/normal_divider_height"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:text="@string/lab_price_style_cube"
+                        android:textColor="@color/radio_tag" />
+                    <RadioButton
+                        android:id="@+id/radKg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:text="@string/lab_price_style_kg"
+                        android:layout_marginRight="@dimen/normal_divider_height"
+                        android:singleLine="true"
+                        android:textColor="@color/radio_tag" />
+                    <RadioButton
+                        android:id="@+id/radPiece"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radio_bg"
+                        android:button="@null"
+                        android:visibility="visible"
+                        android:text="@string/lab_price_style_piece"
+                        android:singleLine="true"
+                        android:textColor="@color/radio_tag" />
+
+                </RadioGroup>
+
+                <TextView
+                    style="@style/NormalFont"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/RegionBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                style="@style/RegionLabelIconBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/RegionRowBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/LabelFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lab_price" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    style="@style/RegionRowBodyBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/txtPrice"
+                        style="@style/NormalFont"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="@string/hint_input_tmp_price"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:textColorHint="@color/hint_face_color" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

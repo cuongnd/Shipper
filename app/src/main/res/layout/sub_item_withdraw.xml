@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <LinearLayout
+        android:id="@+id/btnCoupon"
+        style="@style/RegionPaddingBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            style="@style/RegionLabelBox"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/NormalFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="提现金额(元)" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/EndIconBox"
+            android:layout_marginRight="2dp"
+            >
+
+            <EditText
+                android:id="@+id/txtMoney"
+                style="@style/NormalFont"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="提款金额必须大于100元"
+                android:inputType="numberDecimal"
+                android:text="" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!-- 提交按钮-->
+        <Button
+            android:id="@+id/btnConfirm"
+            style="@style/BlueSharpFillButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="提现" />
+
+        <TextView
+            style="@style/SmallLabelFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="提现遇到问题，请到【我-帮助-联系客服】寻求帮助" />
+    </LinearLayout>
+
+
+</LinearLayout>

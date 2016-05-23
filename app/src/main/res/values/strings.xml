@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 应用名称相关-->
+    <string name="app_name">小象快运</string>
+    <string name="app_name_ver">小象快运-货主</string>
+    <string name="shipper_ver">货主版</string>
+    <string name="app_ver">1.0</string>
+    <string name="app_welcome">小象物流，您身边的大物流专家！</string>
+
+
+    <!--一般性名称-->
+    <string name="phone">手机</string>
+    <string name="password">密码</string>
+    <string name="invitation">邀请码</string>
+    <string name="valid_code">验证码</string>
+    <string name="register">注册</string>
+    <string name="fitch_password">找回密码</string>
+    <string name="title_about_us">关于我们</string>
+
+
+    <!-- FragmentActivity的Title-->
+    <string name="title_order_detail">订单详情</string>
+    <string name="title_bid_order">订单报价</string>
+
+    <!-- 应用菜单相关-->
+    <string name="action_settings">设置</string>
+    <string name="message_settings">消息设置</string>
+    <string name="sys_message">系统消息</string>
+    <string name="tab_home_message">消息</string>
+    <string name="help_feedback">意见反馈</string>
+    <string name="mine_addBeaer">添加司机</string>
+    <string name="mine_withdraw">提现</string>
+    <string name="mine_bankCard">银行卡</string>
+    <string name="mine_recored">交易明细</string>
+
+
+    <!-- UI标题-->
+    <string name="activity_title_login">登录</string>
+
+    <string name="activity_title_register">用户注册</string>
+    <string name="activity_title_deliver">发货</string>
+
+
+    <!-- 提示信息-->
+    <string name="dialog_loading">正在连接中,请稍候…</string>
+    <string name="dialog_request">正在请求…</string>
+    <string name="dialog_later">稍后再说</string>
+    <string name="dialog_update">立刻更新</string>
+    <string name="dialog_change">持卡人姓名或身份证与认证信息不一致，一旦修改以后将不能进行更改。</string>
+    <string name="dialog_bind_limit">银行卡绑定数量已达上限</string>
+    <string name="dialog_IDcard">身份号已被其他用户使用！如需申诉，请联系客服电话：4000-316-888</string>
+    <string name="distance_login">您的账号已在其他设备上登录。若非本人操作，您的登录密码可能已泄露，请及时改密。</string>
+    <string name="dialog_change_sure">修改确认</string>
+    <string name="dialog_IDcard_tip">身份证号已使用</string>
+    <string name="storePath">/shipper/</string>
+
+    <!-- Toast提示-->
+    <string name="tip_need_net">无法连接，请检查网络状态！</string>
+    <string name="tip_need_phone">请输入正确的中国大陆手机号码！</string>
+    <string name="tip_add_friend">点击输入手机号码</string>
+    <string name="tip_need_pwd">请输入正确不小于6位的密码！</string>
+    <string name="tip_need_pwd_confirm">两次输入的密码不同！</string>
+    <string name="tip_login_failed">登录失败，请稍后重试！</string>
+    <string name="tip_invalid_code">错误的验证码！</string>
+    <!-- 表示client端相关代码有错误,多数是服务端返回-1-->
+    <string name="tip_inner_error">请先认认证！</string>
+    <string name="tip_server_error">无法连接服务器！</string>
+    <string name="tip_unknown_error">未知错误！</string>
+    <string name="tip_exception_error">异常错误！</string>
+    <string name="tip_user_exist">用户已存，请登录！</string>
+    <string name="tip_reg_succeed">注册成功！</string>
+    <string name="tip_no_orders">无订单数据！</string>
+
+    <string name="tip_need_address">发货与收货地址不能为空！</string>
+    <string name="tip_need_amount">货物数量与价格不能为空！</string>
+    <string name="tip_need_receiver">收货人姓名与电话不能为空！</string>
+    <string name="tip_click_select_area">点击选择省市区</string>
+    <string name="tip_please_select_area">请选择省市区</string>
+    <string name="tip_please_select_carmodel">请选择车型车长</string>
+    <string name="tip_please_select">请选择</string>
+    <string name="tip_bankcardName">请输入持卡人姓名</string>
+    <string name="tip_bankcardID">请输入持卡人身份证</string>
+
+    <string name="tip_deliver_success">提交发货信息成功！</string>
+    <string name="tip_update_at">更新于:&#160;</string>
+
+    <string name="tip_done">完成</string>
+    <string name="tip_failed">失败</string>
+
+    <string name="tip_first_withdraw">创建交易密码</string>
+    <string name="tip_first_confirm">再次确认交易密码</string>
+    <string name="tip_first_pay">首次账户支付\n请设置支付密码</string>
+    <string name="hint_setPass_tip">输入交易密码</string>
+
+    <string name="tip_delete_ok_please_pay">委托司机成功，请支付运费</string>
+    <string name="tip_delete_ok_please_go">委托成功，请确认发车</string>
+    <string name="tip_delete_ok">委托成功</string>
+
+
+    <!-- 按钮文本-->
+    <string name="btn_submit">提交</string>
+    <string name="btn_send_me_code">获取验证码</string>
+    <string name="btn_login">登录</string>
+
+    <string name="btn_need_to_reg">还没账号，注册</string>
+    <string name="btn_deliver">我要发货</string>
+    <string name="btn_pressed_say">按住 留言</string>
+    <string name="btn_click_play">点击 播放</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_save">保存</string>
+    <string name="btn_confirm">确定</string>
+
+    <string name="btn_delegation">委托</string>
+    <string name="btn_comment">评价</string>
+    <string name="btn_Nocomment">暂无评价</string>
+    <string name="btn_comment_record">评价记录</string>
+
+    <string name="qddsjsmqh">请等待司机上门取货</string>
+    <string name="ysz">运送中</string>
+
+
+    <!--代收货款-->
+    <string name="deliver_Insurance">保险</string>
+    <string name="deliver_Insurance_Amount_tip">金额</string>
+    <string name="deliver_Insurance_Amount">为您免费投保100万元</string>
+    <string name="deliver_AddCollection">添加收货人</string>
+    <string name="deliver_AddCollection_tip">代收货款（司机代收货款）</string>
+    <string name="deliverCollection_order">代收货款订单</string>
+    <string name="deliverCollection">代收货款</string>
+    <string name="deliver_collection">司机代收：</string>
+    <string name="deliver_collection_consignee">收货人/金额</string>
+    <string name="deliverCollectionAmount">代收金额：</string>
+    <string name="deliver_AddCollection_mine">自己</string>
+    <string name="ysk_text">已收款</string>
+    <string name="wsk_text">未收款</string>
+
+    <!-- 标签文本-->
+
+    <string name="lab_phone_num">手 机 号</string>
+    <string name="lab_valid_code">验 证 码</string>
+    <string name="lab_password">密 码</string>
+    <string name="lab_password_new">新 密 码</string>
+    <string name="lab_password_confirm">确认密码</string>
+    <string name="lab_repeat_send">重发</string>
+    <string name="lab_repeat_send_code">重发验证码</string>
+    <string name="lab_timeout">超时</string>
+    <string name="lab_invalid">失效</string>
+    <string name="lab_save">保存</string>
+    <string name="lab_account">账 号</string>
+    <string name="lab_forgot_password">忘记密码？</string>
+    <string name="lab_from_place">出发地</string>
+    <string name="lab_to_place">目的地</string>
+    <string name="lab_price_truck">整车价</string>
+    <string name="lab_price_ton">吨价</string>
+    <string name="lab_price_cube">方价</string>
+    <string name="lab_price_mh">价格：</string>
+    <string name="lab_price">价格</string>
+    <string name="lab_price_unit_cube">元/方</string>
+    <string name="lab_price_unit_ton">元/顿</string>
+    <string name="lab_price_unit_truck">元/车</string>
+    <string name="lab_price_total">总价：</string>
+    <string name="lab_post_deliver">发布</string>
+
+    <string name="lab_sent_address">发货地址</string>
+    <string name="lab_receive_address">收货地址</string>
+    <string name="lab_goods_style">货物类型</string>
+    <string name="lab_goods_amount">货物数量</string>
+    <string name="lab_truck_style">车型</string>
+    <string name="lab_unit_ton">吨位</string>
+    <string name="lab_unit_cube">方数</string>
+    <string name="lab_send_goods_time">发货时间</string>
+    <string name="lab_arrive_goods_time">到货时间</string>
+    <string name="lab_invoice">发票</string>
+    <string name="lab_insurance">保险</string>
+    <string name="lab_pay_method">付款方式</string>
+    <string name="lab_memo">备注</string>
+    <string name="lab_consignee">收货人</string>
+    <string name="lab_consignee_phone">联系方式</string>
+    <string name="lab_total_amount">数量</string>
+    <string name="lab_trans_type">配送方式</string>
+    <string name="lab_carload">零担</string>
+    <string name="lab_vehicle">整车</string>
+    <string name="lab_truck_type_length">车型/车长</string>
+    <string name="lab_sent_time">发货时间</string>
+    <string name="lab_receive_time">到货时间</string>
+    <string name="lab_contact_tip">从通讯录选择</string>
+    <string name="lab_add_contact_tip">添加联系人</string>
+    <string name="has_passed">您的审核已通过，恭喜您！</string>
+    <string name="wo_name">姓名</string>
+    <string name="car_number">车牌号</string>
+    <string name="load">载重</string>
+    <string name="receipt">回单照片</string>
+    <string name="pay_to">支付给司机</string>
+    <string name="pay_money">支付金额</string>
+    <string name="savings">储蓄卡</string>
+    <string name="bind_once">只有一次修改机会</string>
+    <string name="single_limit">单笔限额</string>
+    <string name="daily_limit">每日限额</string>
+
+
+    <!--订单相关-->
+    <string name="lab_order_publish">发货时间：</string>
+    <string name="lab_order_quote">司机报价：</string>
+    <string name="lab_bid_none">暂未报价</string>
+    <string name="lab_qiate_none">暂无司机报价</string>
+    <string name="lab_order_unit_man">人</string>
+    <string name="lab_order_self_quote">您的报价：</string>
+    <string name="lab_order_mine_bid">我的出价：</string>
+    <string name="lab_order_total_price">总价：</string>
+    <string name="lab_order_id">订单编号：</string>
+    <string name="lab_order_display_detail">点击显示订单详细信息</string>
+    <string name="lab_order_pull_more">上拉显示更多</string>
+    <string name="lab_order_pull_refresh">上拉刷新</string>
+    <string name="lab_page_tip">提示：此页只显示订单简略信息。</string>
+    <string name="lab_order_message">订单信息</string>
+
+    //个人认证
+    <string name="lab_click_show_track">点击订单显示司机路线</string>
+    <string name="lab_cn_zhi">至</string>
+    <string name="lab_certification_hackman">平台认证司机</string>
+    <string name="lab_certification_hackman_company">平台认证企业</string>
+    <string name="lab_certification_qualification">资格认证</string>
+    <string name="certification">认证</string>
+    <string name="in_the_review">审核中</string>
+    <string name="review_of_patient">您提交的资料正在审核中，请耐心等待</string>
+    <string name="prompt_failed">您的审核未通过，请重新提交资料。</string>
+    <string name="not_by_reason">未通过原因：</string>
+    <string name="image_fuzzy">身份证过于模糊。</string>
+    <string name="wrong_information">信息填写有误。</string>
+    <string name="certification_progress">提交后，将于1-2个工作日内完成审核。</string>
+    <string name="auth_time_tip">审核提交成功！审核时间1-2个工作日，请耐心等待。</string>
+    <string name="regist_auth_tip">认证为公司需填写法人信息、公司名称并上传相应的营业执照。</string>
+    <string name="regist_busilicen_tip">营业执照上的信息必须与上述所填信息一致！</string>
+    <string name="withdraw_time_tip">提现申请已提交，等待审核后工作日72小时内到账。</string>
+    <string name="auth_success">您的审核已通过，证件将不对外公开且无法更改</string>
+    <string name="operation_tip">您需要进入系统"设置"-"安全"-"应用程序许可"中</string>
+    <string name="operation">您的手机通讯录联系人为空，可能是关闭了小象快运访问通讯录的权限，请去设置中开启</string>
+    <string name="jurisdiction_tip">小象快运没有权限访问您的通讯录</string>
+    <string name="face_tip">(︶︿︶)</string>
+    <string name="to_resubmit">重新提交</string>
+    <string name="payChange">更换</string>
+    <string name="add_bank">添加银行卡</string>
+    <string name="lab_level">等级</string>
+    <string name="lab_level_mh">等级：</string>
+    <string name="lab_send_success_mh">成功送达：</string>
+    <string name="lab_truck_style_mh">车型：</string>
+    <string name="lab_truck_length_mh">车长：</string>
+    <string name="lab_truck_length">车长</string>
+    <string name="lab_bid_price_mh">出价：</string>
+    <string name="lab_total_price_mh">总价：</string>
+
+    <string name="lab_unit">单位</string>
+    <string name="lab_amount">数量</string>
+
+    <string name="lab_price_style">报价方式</string>
+    <string name="lab_price_style_truck">包车价</string>
+    <string name="lab_price_style_rmb_truck">元/包车</string>
+    <string name="lab_price_style_ton">元/吨</string>
+    <string name="lab_price_style_cube">元/方</string>
+    <string name="lab_price_style_kg">元/公斤</string>
+    <string name="lab_price_style_piece">元/件</string>
+    <string name="lab_phone">手机</string>
+
+
+    <!--计量单位-->
+    <string name="unit_cube">方</string>
+    <string name="unit_piece">件</string>
+    <string name="unit_ton">吨</string>
+    <string name="unit_kg">公斤</string>
+    <string name="unit_rmb">元</string>
+    <string name="unit_alone">单</string>
+
+
+    <!--默认提示文本-->
+    <string name="hint_confirm_your_password">确认您的密码</string>
+    <string name="hint_set_your_password">设置您的密码</string>
+    <string name="hint_china_mobile_no">中国大陆手机号</string>
+
+    <string name="hint_input_tmp_price">点击输入暂定价格</string>
+    <string name="hint_select_invoice">点击选择发票</string>
+    <string name="hint_select_insurance">点击查看保险</string>
+    <string name="hint_select_pay_method">点击选择付款方式</string>
+    <string name="hint_select_goods_style">点击选取货物类型</string>
+    <string name="hint_select_truck_style">点击选取车型</string>
+    <string name="hint_select_goods_amount">点击填写货物数量</string>
+    <string name="hint_input_goods_amount">填写货物数量</string>
+    <string name="hint_deliver_memo">请输入货物的详细信息(建议您插入照片)</string>
+    <string name="hint_choose_start_time">选择开始时间</string>
+    <string name="hint_choose_end_time">选择结束时间(选填)</string>
+    <string name="hint_consignee_name">收货人姓名(选填)</string>
+    <string name="hint_consignee_phone">收货人联系电话(选填)</string>
+    <string name="hint_pay_money">请输入支付金额</string>
+    <string name="hint_pay_memo">请输入备注信息（选填）</string>
+
+    <string name="hint_click_set_from_address">点击设置发货地址</string>
+    <string name="hint_click_set_to_address">点击设置收货地址</string>
+
+    <string name="hint_click_del_to_confirm">点击“委托”按钮确认该司机运送订单物品</string>
+
+    <string name="hint_not_null">以下为必填内容</string>
+    <string name="hint_optional_content">以下为选填内容（填写详细内容，有助于您精确找车）</string>
+    <string name="hint_optional_insurance">重要提醒：只有有包装货物才能享受保险</string>
+
+    <string name="hint_click_agree_to_register">点击“注册”按钮，即表示您同意</string>
+    <string name="hint_click_agree_to_license">《小象速运许可及服务协议》</string>
+
+
+    <!-- Tab页名称-->
+    <string name="tab_home">小象快运</string>
+    <string name="tab_order">我的订单</string>
+    <string name="tab_track">订单跟踪</string>
+    <string name="tab_mine">我</string>
+
+    <string name="tab_lab_quoting">报价中</string>
+    <string name="tab_lab_shipping">运送中</string>
+    <string name="tab_lab_finished">已完成</string>
+
+    <string name="tab_lab_order_default">默认排序</string>
+    <string name="tab_lab_order_credit">信用排序</string>
+    <string name="tab_lab_order_price">价格排序</string>
+
+
+    <!-- icon 文本 -->
+    <string name="icon_message">消息</string>
+    <string name="icon_prize">礼包</string>
+    <string name="icon_road_condition">路况</string>
+    <string name="icon_friend">联系人</string>
+    <string name="icon_calculate">运价计算</string>
+    <string name="icon_my_wallet">我的钱包</string>
+    <string name="icon_wallet">钱包</string>
+    <string name="icon_setting">设置</string>
+    <string name="icon_game">游戏</string>
+    <string name="icon_score_shop">积分商城</string>
+    <string name="icon_score">积分</string>
+    <string name="icon_help">帮助</string>
+    <string name="icon_tool">工具</string>
+    <string name="icon_oil">油卡充值</string>
+
+    <!-- 占位 -->
+    <string name="hold_price">8898.88</string>
+    <string name="versionName">v1.0</string>
+    <!--DEBUG And Default-->
+    <string name="hello_world">Hello world!</string>
+    <string name="image_content">image</string>
+
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main_tab">MainTabActivity</string>
+
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_forgot">ForgotActivity</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_deliver">DeliverActivity</string>
+    <string name="title_activity_demo">Demo</string>
+
+    <string name="title_activity_demo2">Demo2Activity</string>
+
+    <string name="title_activity_setting">设置</string>
+    <string name="title_activity_mine">我</string>
+    <string name="title_activity_main_tab_fragment">小象快运</string>
+    <string name="title_activity_order_detail">订单详情</string>
+    <string name="title_activity_freight_fragment">运价计算</string>
+    <string name="title_activity_address_fragment">地址管理</string>
+    <string name="title_activity_crop_image_fragment">图片裁剪</string>
+    <string name="title_activity_user_detail">个人资料</string>
+    <string name="title_activity_user_wallet">钱包</string>
+    <string name="title_activity_user_friend">常用司机</string>
+    <string name="title_activity_del_friend">删除司机</string>
+    <string name="title_activity_user_setting">设置</string>
+    <string name="title_activity_user_help">帮助</string>
+    <string name="title_activity_user_tool">工具</string>
+    <string name="title_pay_to_platform">支付</string>
+    <string name="title_activity_bd_map">BdMapActivity</string>
+    <string name="title_activity_order_comment_fragment">订单评价</string>
+    <string name="title_activity_xgreceiver">XGReceiverActivity</string>
+    <string name="title_activity_location_fragment">定位</string>
+    <string name="confirm_the_deletion">确认要删除记录?</string>
+    <string name="delete_txt">删除</string>
+    <string name="delete_a_success">删除成功！</string>
+
+    <string name="rota_left">左旋</string>
+    <string name="rota_right">右旋</string>
+    <string name="about_a">\t\t上海鲁朗网络科技有限公司成立于2014年，旗下核心产品是一款致力于解决货运行业高空驶率，车辆运营效率低的移动端app，实现车找货、货找车线上自动化，使信息流、资金流快速流转，为货运行业增效增益。</string>
+    <string name="about_b">\t\t创始人有十年以上互联网产品开发及运营经验，并具备极强的战略思维，团队其他成员多为知名互联网企业高管与物流企业资深人士。</string>
+    <string name="about_c">\t\t公司受到众多投资人的关注，目前已拿到数千万天使投资。团队将始终不渝去追求产品功能创新及用户体验度的极致，打造出国内乃至国际物流行业的最大互联网物流平台。</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="wallet_password">为了确保您账户的安全，请输入6位提现密码</string>
+
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <!--交易记录详情-->
+    <string name="transaction_amount">交易金额</string>
+    <string name="order_information">订单信息</string>
+    <string name="payment_list">付款明细</string>
+    <string name="serial_number">流水号</string>
+    <string name="trading_hours">交易时间</string>
+    <!--退款记录详情-->
+    <string name="refund_mount">退款金额</string>
+    <string name="refund_application">提交退款申请</string>
+    <string name="refund_check">退款审核</string>
+    <string name="refund_deal">退款处理</string>
+    <string name="refund_deal_success">退款成功</string>
+    <string name="refund_deal_filed">退款失败</string>
+    <string name="refund_in_the_processing">退款处理中</string>
+    <string name="refund_instructions_one">工作日17:00前退款的请求，18:00前将统一给予审核结果，17:00以后的退款请求，在第二天的12:00前给予审核结果。</string>
+    <string name="refund_instructions_two">工作日18:00以后用户退款的数据放在第二天处理，周六与周日的退款申请放在下周周一统一处理。</string>
+    <!--赎回记录详情-->
+    <string name="redeem_mount">赎回金额</string>
+    <string name="redeem_application">提交赎回申请</string>
+    <string name="redeem_check">赎回审核</string>
+    <string name="redeem_deal">赎回处理</string>
+    <string name="redeem_deal_success">赎回成功</string>
+    <string name="redeem_deal_filed">赎回失败</string>
+    <string name="redeem_in_the_processing">赎回处理中</string>
+    <string name="redeem_instructions_one">工作日17:00前赎回的请求，18:00前将统一给予审核结果，17:00以后的赎回请求，在第二天的12:00前给予审核结果。</string>
+    <string name="redeem_instructions_two">工作日18:00以后用户赎回的数据放在第二天处理，周六与周日的赎回申请放在下周周一统一处理。</string>
+
+    <!--提现记录详情-->
+    <string name="withdrawal_mount">提现金额</string>
+    <string name="withdrawal_application">提交提现申请</string>
+    <string name="withdrawal_check">提现审核</string>
+    <string name="withdrawal_deal">提现处理</string>
+    <string name="withdrawal_deal_success">提现成功</string>
+    <string name="withdrawal_deal_filed">提现失败</string>
+    <string name="withdrawal_in_the_processing">提现处理中</string>
+    <string name="withdrawal_instructions_one">工作日17:00前提现的请求，18:00前将统一给予审核结果，17:00以后的提现请求，在第二天的12:00前给予审核结果。</string>
+    <string name="withdrawal_instructions_two">工作日18:00以后用户提现的数据放在第二天处理，周六与周日的提现申请放在下周周一统一处理。</string>
+
+    <string name="hint_unAuthentication">未认证</string>
+    <string name="hint_unAuthentication_company">企业未认证</string>
+    <string name="hint_authenticationed">已认证</string>
+    <string name="hint_authenticationed_company">企业已认证</string>
+    <string name="hint_authent_company">企业认证</string>
+    <string name="authentication_failed">认证失败</string>
+    <string name="hint_authentication">验证中</string>
+    <string name="hint_authentication_company">企业验证中</string>
+
+    <!--优惠券-->
+    <string name="coupons_text_one">限充值油卡使用。\n支持中石化、中石油。</string>
+    <string name="coupons_text_two">限代收货款订单使用。\n仅支持在线支付。</string>
+    <string name="coupons_dead_line">有效期至</string>
+    <string name="coupons_out_date">已过期</string>
+    <string name="choose_pay_coupon">请选择要使用的优惠券</string>
+    <string name="sorry_not_coupon">抱歉，您还没有可使用的优惠券。</string>
+</resources>

@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bg_grey"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+
+    <!-- 跟踪中的订单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="2dp"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:paddingTop="2dp">
+
+        <TextView
+            android:id="@+id/labFromArea"
+            style="@style/OrderAreaTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="from" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@null"
+            android:scaleType="centerInside"
+            android:src="@drawable/dd_icon_dz_2x" />
+
+        <TextView
+            android:id="@+id/labToArea"
+            style="@style/OrderAreaTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to" />
+        <ImageView
+            android:id="@+id/imgCompanyIcon"
+            android:src="@mipmap/dd_icon_company"
+            android:visibility="gone"
+            android:padding="@dimen/dp_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/holdSpace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/textView11"
+            style="@style/LabelSmallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lab_order_publish" />
+
+        <TextView
+            android:id="@+id/labPublishTime"
+            style="@style/LabelSmallText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2015年08月18日" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        style="@style/BlankBox"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="0.5dp"
+        android:layout_marginTop="0.5dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/ivLocate"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/wyfh_icon_wz_2x" />
+
+        <TextView
+            android:id="@+id/labGoodsType"
+            style="@style/BigText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@+id/ivLocate"
+            android:text="机械设备" />
+
+        <TextView
+            android:id="@+id/labAmount"
+            style="@style/BigText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/labGoodsType"
+            android:text="N" />
+
+        <TextView
+            android:id="@+id/labUnit"
+            style="@style/BigText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@+id/labAmount"
+            android:text="吨" />
+        <LinearLayout
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/labUnit"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/imgTrackCall"
+                android:src="@mipmap/dd_icon_dh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/labBearName"
+                    style="@style/BigText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:maxLength="18"
+                    android:ellipsize="end"
+                    android:text=""/>
+                <TextView
+                    android:id="@+id/labBearPlate"
+                    style="@style/LabelNormalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="2dp"
+                    android:text=""/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/LinShowMore"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:padding="@dimen/normal_divider_height"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:src="@mipmap/fh_icon_open"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="承运司机列表"
+            style="@style/LabelFont"
+            android:layout_marginLeft="@dimen/normal_divider_height"
+            android:textColor="@color/bg_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/LinBeaerList"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <org.csware.ee.widget.ScrollViewForListView
+            android:id="@+id/listViewBeaers"
+            android:cacheColorHint="@android:color/transparent"
+            android:divider="@color/bg_silver"
+            android:visibility="visible"
+            android:dividerHeight="0.5dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/LinHideMore"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="@color/white"
+            android:visibility="visible"
+            android:padding="@dimen/normal_divider_height"
+            android:layout_height="wrap_content">
+            <View
+                android:layout_width="fill_parent"
+                android:layout_marginBottom="@dimen/dp_4"
+                android:layout_height="0.5dp" android:background="@color/bg_silver" />
+            <ImageView
+                android:src="@mipmap/fh_icon_close"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

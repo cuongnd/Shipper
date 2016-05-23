@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/bg_silver"
+    android:layout_height="match_parent">
+    <org.csware.ee.view.TopActionBar
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:canClose="true" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/btnScoreDetail"
+            style="@style/RegionPaddingBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/normal_divider_height"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/NormalFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="6dp"
+                    android:text="我的积分" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/icon_very_small_h"
+                    android:text="0"
+                    android:id="@+id/labScore"
+                    style="@style/FreightFont"
+                    android:gravity="bottom"
+                    android:textColor="@color/black"/>
+                <ImageView
+                    android:id="@+id/img_integra_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/integra_txt"
+                    android:layout_alignBottom="@+id/integra_txt"
+                    android:layout_gravity="center_vertical"
+                    android:padding="@dimen/dp_4"
+                    android:layout_marginLeft="6dp"
+                    android:background="@mipmap/button_help_default"
+                    />
+                <ImageView
+                    android:layout_marginLeft="@dimen/icon_very_small_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <ListView
+                android:id="@+id/listGame"
+                android:dividerHeight="@dimen/icon_very_small_h"
+                android:divider="@color/bg_silver"
+                android:listSelector="@drawable/list_selector"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
